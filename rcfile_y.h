@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.7.4.  */
+/* A Bison parser, made by GNU Bison 3.8.2.  */
 
 /* Bison interface for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2020 Free Software Foundation,
+   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2021 Free Software Foundation,
    Inc.
 
    This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
    GNU General Public License for more details.
 
    You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
 
 /* As a special exception, you may create a larger work that contains
    part or all of the Bison parser skeleton and distribute that work
@@ -35,8 +35,8 @@
    especially those whose name start with YY_ or yy_.  They are
    private implementation details that can be changed or removed.  */
 
-#ifndef YY_YY__RCFILE_Y_H_INCLUDED
-# define YY_YY__RCFILE_Y_H_INCLUDED
+#ifndef YY_YY_RCFILE_Y_H_INCLUDED
+# define YY_YY_RCFILE_Y_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 1
@@ -69,85 +69,86 @@ extern int yydebug;
     QVIRTUAL = 270,                /* QVIRTUAL  */
     USERNAME = 271,                /* USERNAME  */
     PASSWORD = 272,                /* PASSWORD  */
-    FOLDER = 273,                  /* FOLDER  */
-    SMTPHOST = 274,                /* SMTPHOST  */
-    FETCHDOMAINS = 275,            /* FETCHDOMAINS  */
-    MDA = 276,                     /* MDA  */
-    BSMTP = 277,                   /* BSMTP  */
-    LMTP = 278,                    /* LMTP  */
-    SMTPADDRESS = 279,             /* SMTPADDRESS  */
-    SMTPNAME = 280,                /* SMTPNAME  */
-    SPAMRESPONSE = 281,            /* SPAMRESPONSE  */
-    PRECONNECT = 282,              /* PRECONNECT  */
-    POSTCONNECT = 283,             /* POSTCONNECT  */
-    LIMIT = 284,                   /* LIMIT  */
-    WARNINGS = 285,                /* WARNINGS  */
-    INTERFACE = 286,               /* INTERFACE  */
-    MONITOR = 287,                 /* MONITOR  */
-    PLUGIN = 288,                  /* PLUGIN  */
-    PLUGOUT = 289,                 /* PLUGOUT  */
-    IS = 290,                      /* IS  */
-    HERE = 291,                    /* HERE  */
-    THERE = 292,                   /* THERE  */
-    TO = 293,                      /* TO  */
-    MAP = 294,                     /* MAP  */
-    BATCHLIMIT = 295,              /* BATCHLIMIT  */
-    FETCHLIMIT = 296,              /* FETCHLIMIT  */
-    FETCHSIZELIMIT = 297,          /* FETCHSIZELIMIT  */
-    FASTUIDL = 298,                /* FASTUIDL  */
-    EXPUNGE = 299,                 /* EXPUNGE  */
-    PROPERTIES = 300,              /* PROPERTIES  */
-    SET = 301,                     /* SET  */
-    LOGFILE = 302,                 /* LOGFILE  */
-    DAEMON = 303,                  /* DAEMON  */
-    SYSLOG = 304,                  /* SYSLOG  */
-    IDFILE = 305,                  /* IDFILE  */
-    PIDFILE = 306,                 /* PIDFILE  */
-    INVISIBLE = 307,               /* INVISIBLE  */
-    POSTMASTER = 308,              /* POSTMASTER  */
-    BOUNCEMAIL = 309,              /* BOUNCEMAIL  */
-    SPAMBOUNCE = 310,              /* SPAMBOUNCE  */
-    SOFTBOUNCE = 311,              /* SOFTBOUNCE  */
-    SHOWDOTS = 312,                /* SHOWDOTS  */
-    BADHEADER = 313,               /* BADHEADER  */
-    ACCEPT = 314,                  /* ACCEPT  */
-    REJECT_ = 315,                 /* REJECT_  */
-    PROTO = 316,                   /* PROTO  */
-    AUTHTYPE = 317,                /* AUTHTYPE  */
-    STRING = 318,                  /* STRING  */
-    NUMBER = 319,                  /* NUMBER  */
-    NO = 320,                      /* NO  */
-    KEEP = 321,                    /* KEEP  */
-    FLUSH = 322,                   /* FLUSH  */
-    LIMITFLUSH = 323,              /* LIMITFLUSH  */
-    FETCHALL = 324,                /* FETCHALL  */
-    REWRITE = 325,                 /* REWRITE  */
-    FORCECR = 326,                 /* FORCECR  */
-    STRIPCR = 327,                 /* STRIPCR  */
-    PASS8BITS = 328,               /* PASS8BITS  */
-    DROPSTATUS = 329,              /* DROPSTATUS  */
-    DROPDELIVERED = 330,           /* DROPDELIVERED  */
-    DNS = 331,                     /* DNS  */
-    SERVICE = 332,                 /* SERVICE  */
-    PORT = 333,                    /* PORT  */
-    UIDL = 334,                    /* UIDL  */
-    INTERVAL = 335,                /* INTERVAL  */
-    MIMEDECODE = 336,              /* MIMEDECODE  */
-    IDLE = 337,                    /* IDLE  */
-    CHECKALIAS = 338,              /* CHECKALIAS  */
-    SSL = 339,                     /* SSL  */
-    SSLKEY = 340,                  /* SSLKEY  */
-    SSLCERT = 341,                 /* SSLCERT  */
-    SSLPROTO = 342,                /* SSLPROTO  */
-    SSLCERTCK = 343,               /* SSLCERTCK  */
-    SSLCERTFILE = 344,             /* SSLCERTFILE  */
-    SSLCERTPATH = 345,             /* SSLCERTPATH  */
-    SSLCOMMONNAME = 346,           /* SSLCOMMONNAME  */
-    SSLFINGERPRINT = 347,          /* SSLFINGERPRINT  */
-    PRINCIPAL = 348,               /* PRINCIPAL  */
-    ESMTPNAME = 349,               /* ESMTPNAME  */
-    ESMTPPASSWORD = 350,           /* ESMTPPASSWORD  */
-    TRACEPOLLS = 351               /* TRACEPOLLS  */
+    IMAP_ID = 273,                 /* IMAP_ID  */
+    FOLDER = 274,                  /* FOLDER  */
+    SMTPHOST = 275,                /* SMTPHOST  */
+    FETCHDOMAINS = 276,            /* FETCHDOMAINS  */
+    MDA = 277,                     /* MDA  */
+    BSMTP = 278,                   /* BSMTP  */
+    LMTP = 279,                    /* LMTP  */
+    SMTPADDRESS = 280,             /* SMTPADDRESS  */
+    SMTPNAME = 281,                /* SMTPNAME  */
+    SPAMRESPONSE = 282,            /* SPAMRESPONSE  */
+    PRECONNECT = 283,              /* PRECONNECT  */
+    POSTCONNECT = 284,             /* POSTCONNECT  */
+    LIMIT = 285,                   /* LIMIT  */
+    WARNINGS = 286,                /* WARNINGS  */
+    INTERFACE = 287,               /* INTERFACE  */
+    MONITOR = 288,                 /* MONITOR  */
+    PLUGIN = 289,                  /* PLUGIN  */
+    PLUGOUT = 290,                 /* PLUGOUT  */
+    IS = 291,                      /* IS  */
+    HERE = 292,                    /* HERE  */
+    THERE = 293,                   /* THERE  */
+    TO = 294,                      /* TO  */
+    MAP = 295,                     /* MAP  */
+    BATCHLIMIT = 296,              /* BATCHLIMIT  */
+    FETCHLIMIT = 297,              /* FETCHLIMIT  */
+    FETCHSIZELIMIT = 298,          /* FETCHSIZELIMIT  */
+    FASTUIDL = 299,                /* FASTUIDL  */
+    EXPUNGE = 300,                 /* EXPUNGE  */
+    PROPERTIES = 301,              /* PROPERTIES  */
+    SET = 302,                     /* SET  */
+    LOGFILE = 303,                 /* LOGFILE  */
+    DAEMON = 304,                  /* DAEMON  */
+    SYSLOG = 305,                  /* SYSLOG  */
+    IDFILE = 306,                  /* IDFILE  */
+    PIDFILE = 307,                 /* PIDFILE  */
+    INVISIBLE = 308,               /* INVISIBLE  */
+    POSTMASTER = 309,              /* POSTMASTER  */
+    BOUNCEMAIL = 310,              /* BOUNCEMAIL  */
+    SPAMBOUNCE = 311,              /* SPAMBOUNCE  */
+    SOFTBOUNCE = 312,              /* SOFTBOUNCE  */
+    SHOWDOTS = 313,                /* SHOWDOTS  */
+    BADHEADER = 314,               /* BADHEADER  */
+    ACCEPT = 315,                  /* ACCEPT  */
+    REJECT_ = 316,                 /* REJECT_  */
+    PROTO = 317,                   /* PROTO  */
+    AUTHTYPE = 318,                /* AUTHTYPE  */
+    STRING = 319,                  /* STRING  */
+    NUMBER = 320,                  /* NUMBER  */
+    NO = 321,                      /* NO  */
+    KEEP = 322,                    /* KEEP  */
+    FLUSH = 323,                   /* FLUSH  */
+    LIMITFLUSH = 324,              /* LIMITFLUSH  */
+    FETCHALL = 325,                /* FETCHALL  */
+    REWRITE = 326,                 /* REWRITE  */
+    FORCECR = 327,                 /* FORCECR  */
+    STRIPCR = 328,                 /* STRIPCR  */
+    PASS8BITS = 329,               /* PASS8BITS  */
+    DROPSTATUS = 330,              /* DROPSTATUS  */
+    DROPDELIVERED = 331,           /* DROPDELIVERED  */
+    DNS = 332,                     /* DNS  */
+    SERVICE = 333,                 /* SERVICE  */
+    PORT = 334,                    /* PORT  */
+    UIDL = 335,                    /* UIDL  */
+    INTERVAL = 336,                /* INTERVAL  */
+    MIMEDECODE = 337,              /* MIMEDECODE  */
+    IDLE = 338,                    /* IDLE  */
+    CHECKALIAS = 339,              /* CHECKALIAS  */
+    SSL = 340,                     /* SSL  */
+    SSLKEY = 341,                  /* SSLKEY  */
+    SSLCERT = 342,                 /* SSLCERT  */
+    SSLPROTO = 343,                /* SSLPROTO  */
+    SSLCERTCK = 344,               /* SSLCERTCK  */
+    SSLCERTFILE = 345,             /* SSLCERTFILE  */
+    SSLCERTPATH = 346,             /* SSLCERTPATH  */
+    SSLCOMMONNAME = 347,           /* SSLCOMMONNAME  */
+    SSLFINGERPRINT = 348,          /* SSLFINGERPRINT  */
+    PRINCIPAL = 349,               /* PRINCIPAL  */
+    ESMTPNAME = 350,               /* ESMTPNAME  */
+    ESMTPPASSWORD = 351,           /* ESMTPPASSWORD  */
+    TRACEPOLLS = 352               /* TRACEPOLLS  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -171,97 +172,98 @@ extern int yydebug;
 #define QVIRTUAL 270
 #define USERNAME 271
 #define PASSWORD 272
-#define FOLDER 273
-#define SMTPHOST 274
-#define FETCHDOMAINS 275
-#define MDA 276
-#define BSMTP 277
-#define LMTP 278
-#define SMTPADDRESS 279
-#define SMTPNAME 280
-#define SPAMRESPONSE 281
-#define PRECONNECT 282
-#define POSTCONNECT 283
-#define LIMIT 284
-#define WARNINGS 285
-#define INTERFACE 286
-#define MONITOR 287
-#define PLUGIN 288
-#define PLUGOUT 289
-#define IS 290
-#define HERE 291
-#define THERE 292
-#define TO 293
-#define MAP 294
-#define BATCHLIMIT 295
-#define FETCHLIMIT 296
-#define FETCHSIZELIMIT 297
-#define FASTUIDL 298
-#define EXPUNGE 299
-#define PROPERTIES 300
-#define SET 301
-#define LOGFILE 302
-#define DAEMON 303
-#define SYSLOG 304
-#define IDFILE 305
-#define PIDFILE 306
-#define INVISIBLE 307
-#define POSTMASTER 308
-#define BOUNCEMAIL 309
-#define SPAMBOUNCE 310
-#define SOFTBOUNCE 311
-#define SHOWDOTS 312
-#define BADHEADER 313
-#define ACCEPT 314
-#define REJECT_ 315
-#define PROTO 316
-#define AUTHTYPE 317
-#define STRING 318
-#define NUMBER 319
-#define NO 320
-#define KEEP 321
-#define FLUSH 322
-#define LIMITFLUSH 323
-#define FETCHALL 324
-#define REWRITE 325
-#define FORCECR 326
-#define STRIPCR 327
-#define PASS8BITS 328
-#define DROPSTATUS 329
-#define DROPDELIVERED 330
-#define DNS 331
-#define SERVICE 332
-#define PORT 333
-#define UIDL 334
-#define INTERVAL 335
-#define MIMEDECODE 336
-#define IDLE 337
-#define CHECKALIAS 338
-#define SSL 339
-#define SSLKEY 340
-#define SSLCERT 341
-#define SSLPROTO 342
-#define SSLCERTCK 343
-#define SSLCERTFILE 344
-#define SSLCERTPATH 345
-#define SSLCOMMONNAME 346
-#define SSLFINGERPRINT 347
-#define PRINCIPAL 348
-#define ESMTPNAME 349
-#define ESMTPPASSWORD 350
-#define TRACEPOLLS 351
+#define IMAP_ID 273
+#define FOLDER 274
+#define SMTPHOST 275
+#define FETCHDOMAINS 276
+#define MDA 277
+#define BSMTP 278
+#define LMTP 279
+#define SMTPADDRESS 280
+#define SMTPNAME 281
+#define SPAMRESPONSE 282
+#define PRECONNECT 283
+#define POSTCONNECT 284
+#define LIMIT 285
+#define WARNINGS 286
+#define INTERFACE 287
+#define MONITOR 288
+#define PLUGIN 289
+#define PLUGOUT 290
+#define IS 291
+#define HERE 292
+#define THERE 293
+#define TO 294
+#define MAP 295
+#define BATCHLIMIT 296
+#define FETCHLIMIT 297
+#define FETCHSIZELIMIT 298
+#define FASTUIDL 299
+#define EXPUNGE 300
+#define PROPERTIES 301
+#define SET 302
+#define LOGFILE 303
+#define DAEMON 304
+#define SYSLOG 305
+#define IDFILE 306
+#define PIDFILE 307
+#define INVISIBLE 308
+#define POSTMASTER 309
+#define BOUNCEMAIL 310
+#define SPAMBOUNCE 311
+#define SOFTBOUNCE 312
+#define SHOWDOTS 313
+#define BADHEADER 314
+#define ACCEPT 315
+#define REJECT_ 316
+#define PROTO 317
+#define AUTHTYPE 318
+#define STRING 319
+#define NUMBER 320
+#define NO 321
+#define KEEP 322
+#define FLUSH 323
+#define LIMITFLUSH 324
+#define FETCHALL 325
+#define REWRITE 326
+#define FORCECR 327
+#define STRIPCR 328
+#define PASS8BITS 329
+#define DROPSTATUS 330
+#define DROPDELIVERED 331
+#define DNS 332
+#define SERVICE 333
+#define PORT 334
+#define UIDL 335
+#define INTERVAL 336
+#define MIMEDECODE 337
+#define IDLE 338
+#define CHECKALIAS 339
+#define SSL 340
+#define SSLKEY 341
+#define SSLCERT 342
+#define SSLPROTO 343
+#define SSLCERTCK 344
+#define SSLCERTFILE 345
+#define SSLCERTPATH 346
+#define SSLCOMMONNAME 347
+#define SSLFINGERPRINT 348
+#define PRINCIPAL 349
+#define ESMTPNAME 350
+#define ESMTPPASSWORD 351
+#define TRACEPOLLS 352
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 57 "../rcfile_y.y"
+#line 57 "rcfile_y.y"
 
   int proto;
   int number;
   char *sval;
 
-#line 265 "../rcfile_y.h"
+#line 267 "rcfile_y.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -272,6 +274,8 @@ typedef union YYSTYPE YYSTYPE;
 
 extern YYSTYPE yylval;
 
+
 int yyparse (void);
 
-#endif /* !YY_YY__RCFILE_Y_H_INCLUDED  */
+
+#endif /* !YY_YY_RCFILE_Y_H_INCLUDED  */

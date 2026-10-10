@@ -1,1 +1,17 @@
 *.o
+.pc
+debian/.debhelper
+autom4te.cache
+debian/.debhelper
+debian/autoreconf.after
+debian/autoreconf.before
+debian/debhelper-build-stamp
+debian/fetchmail.debhelper.log
+debian/fetchmail.substvars
+debian/fetchmail
+debian/files
+m4/extern-inline.m4
+m4/fcntl-o.m4
+m4/threadlib.m4
+po/Makevars.template
+

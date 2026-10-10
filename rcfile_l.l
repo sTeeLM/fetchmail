@@ -120,6 +120,7 @@ user(name)?	{SETSTATE(NAME); return USERNAME; }
 <INITIAL,NAME>pass(word)?	{SETSTATE(NAME); return PASSWORD; }
 folder(s)? 	{ return FOLDER; }
 smtp(host)?	{ return SMTPHOST; }
+imap_id     { return IMAP_ID;  }
 fetchdomains	{ return FETCHDOMAINS; }
 smtpaddress	{ return SMTPADDRESS; }
 smtpname	{ return SMTPNAME; }

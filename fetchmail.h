@@ -324,6 +324,7 @@ struct query
     int wildcard;		/* should unmatched names be passed through */
     char *remotename;		/* remote login name to use */
     char *password;		/* remote password to use */
+    char * imap_id;     /* if not null, send IMAP ID command */
     struct idlist *mailboxes;	/* list of mailboxes to check */
 
     /* per-forwarding-target data */

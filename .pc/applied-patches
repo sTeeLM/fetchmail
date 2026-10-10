@@ -3,3 +3,4 @@
 07_properly_report_size_of_mailboxes.patch
 08_remove_forced_OpenSSL_check.patch
 CVE-2025-61962.patch
+fix-imap-id.patch

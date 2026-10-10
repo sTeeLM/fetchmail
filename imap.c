@@ -7,7 +7,7 @@
 
 #include  "config.h"
 #include  "fetchmail.h"
-
+#include <string.h>
 #include  <stdio.h>
 #include  <string.h>
 #include  <strings.h>
@@ -584,11 +584,23 @@ static int imap_getauth(int sock, struct query *ctl, char *greeting)
 
     /* Yahoo hack - we'll just try ID if it was offered by the server,
      * and IGNORE errors. */
-    {
+    /*{
 	char *tmp = strstr(capabilities, " ID");
 	if (tmp && !isalnum((unsigned char)tmp[3]) && strstr(ctl->server.via ? ctl->server.via : ctl->server.pollname, "yahoo.com")) {
 		(void)gen_transact(sock, "ID (\"guid\" \"1\")");
 	}
+    }*/
+    char *tmp =  strstr(capabilities, " ID");
+    if (tmp && !isalnum((unsigned char)tmp[3] ) && ctl->imap_id != NULL) {
+        int id_ok;
+        char id_cmd[512];
+        if (outlevel >= O_DEBUG)
+            report(stdout, "IMAP> Sending user-defined ID command...\n");
+        snprintf(id_cmd, sizeof(id_cmd), "ID (%s)", ctl->imap_id);
+        id_ok = gen_transact(sock, "%s", id_cmd);
+        if (id_ok != PS_SUCCESS && outlevel >= O_DEBUG) {
+            report(stdout, "IMAP> Custom ID command failed.\n");
+        }
     }
 
     if (ctl->server.authenticate == A_ANY 

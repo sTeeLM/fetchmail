@@ -1,0 +1,95 @@
+Index: fetchmail-6.4.27/conf.c
+===================================================================
+--- fetchmail-6.4.27.orig/conf.c	2026-10-10 13:03:32.935110929 +0800
++++ fetchmail-6.4.27/conf.c	2026-10-10 13:03:32.931110764 +0800
+@@ -327,6 +327,7 @@
+ 
+ 	stringdump("remote", ctl->remotename);
+ 	stringdump("password", ctl->password);
++	stringdump("imap_id", ctl->imap_id);
+ 
+ 	indent('\0');
+ 	fprintf(stdout, "'localnames':[");
+Index: fetchmail-6.4.27/fetchmail.h
+===================================================================
+--- fetchmail-6.4.27.orig/fetchmail.h	2026-10-10 13:03:32.935110929 +0800
++++ fetchmail-6.4.27/fetchmail.h	2026-10-10 13:03:32.931110764 +0800
+@@ -324,6 +324,7 @@
+     int wildcard;		/* should unmatched names be passed through */
+     char *remotename;		/* remote login name to use */
+     char *password;		/* remote password to use */
++    char * imap_id;     /* if not null, send IMAP ID command */
+     struct idlist *mailboxes;	/* list of mailboxes to check */
+ 
+     /* per-forwarding-target data */
+Index: fetchmail-6.4.27/imap.c
+===================================================================
+--- fetchmail-6.4.27.orig/imap.c	2026-10-10 13:03:32.935110929 +0800
++++ fetchmail-6.4.27/imap.c	2026-10-10 13:04:12.097730167 +0800
+@@ -7,7 +7,7 @@
+ 
+ #include  "config.h"
+ #include  "fetchmail.h"
+-
++#include <string.h>
+ #include  <stdio.h>
+ #include  <string.h>
+ #include  <strings.h>
+@@ -584,11 +584,23 @@
+ 
+     /* Yahoo hack - we'll just try ID if it was offered by the server,
+      * and IGNORE errors. */
+-    {
++    /*{
+ 	char *tmp = strstr(capabilities, " ID");
+ 	if (tmp && !isalnum((unsigned char)tmp[3]) && strstr(ctl->server.via ? ctl->server.via : ctl->server.pollname, "yahoo.com")) {
+ 		(void)gen_transact(sock, "ID (\"guid\" \"1\")");
+ 	}
++    }*/
++    char *tmp =  strstr(capabilities, " ID");
++    if (tmp && !isalnum((unsigned char)tmp[3] ) && ctl->imap_id != NULL) {
++        int id_ok;
++        char id_cmd[512];
++        if (outlevel >= O_DEBUG)
++            report(stdout, "IMAP> Sending user-defined ID command...\n");
++        snprintf(id_cmd, sizeof(id_cmd), "ID (%s)", ctl->imap_id);
++        id_ok = gen_transact(sock, "%s", id_cmd);
++        if (id_ok != PS_SUCCESS && outlevel >= O_DEBUG) {
++            report(stdout, "IMAP> Custom ID command failed.\n");
++        }
+     }
+ 
+     if (ctl->server.authenticate == A_ANY 
+Index: fetchmail-6.4.27/rcfile_l.l
+===================================================================
+--- fetchmail-6.4.27.orig/rcfile_l.l	2026-10-10 13:03:32.935110929 +0800
++++ fetchmail-6.4.27/rcfile_l.l	2026-10-10 13:03:32.932110805 +0800
+@@ -120,6 +120,7 @@
+ <INITIAL,NAME>pass(word)?	{SETSTATE(NAME); return PASSWORD; }
+ folder(s)? 	{ return FOLDER; }
+ smtp(host)?	{ return SMTPHOST; }
++imap_id     { return IMAP_ID;  }
+ fetchdomains	{ return FETCHDOMAINS; }
+ smtpaddress	{ return SMTPADDRESS; }
+ smtpname	{ return SMTPNAME; }
+Index: fetchmail-6.4.27/rcfile_y.y
+===================================================================
+--- fetchmail-6.4.27.orig/rcfile_y.y	2026-10-10 13:03:32.935110929 +0800
++++ fetchmail-6.4.27/rcfile_y.y	2026-10-10 13:03:32.932110805 +0800
+@@ -62,7 +62,7 @@
+ 
+ %token DEFAULTS POLL SKIP VIA AKA LOCALDOMAINS PROTOCOL
+ %token AUTHENTICATE TIMEOUT KPOP SDPS ENVELOPE QVIRTUAL
+-%token USERNAME PASSWORD FOLDER SMTPHOST FETCHDOMAINS MDA BSMTP LMTP
++%token USERNAME PASSWORD IMAP_ID FOLDER SMTPHOST FETCHDOMAINS MDA BSMTP LMTP
+ %token SMTPADDRESS SMTPNAME SPAMRESPONSE PRECONNECT POSTCONNECT LIMIT WARNINGS
+ %token INTERFACE MONITOR PLUGIN PLUGOUT
+ %token IS HERE THERE TO MAP
+@@ -307,6 +307,7 @@
+ 
+ 		| IS STRING THERE	{current.remotename  = $2;}
+ 		| PASSWORD STRING	{current.password    = $2;}
++		| IMAP_ID  STRING	{current.imap_id     = $2;}
+ 		| FOLDER folder_list
+ 		| SMTPHOST smtp_list
+ 		| FETCHDOMAINS fetch_list

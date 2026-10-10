@@ -1,3 +1,9 @@
+fetchmail (6.4.27+imap-id) UNRELEASED; urgency=medium
+
+  * add imap_id support
+
+ -- michael <michael@server.madcat.cc>  Sat, 10 Oct 2026 13:14:53 +0800
+
 fetchmail (6.4.27-1ubuntu0.1) jammy-security; urgency=medium
 
   * SECURITY UPDATE: DoS via 334 reply from SMTP server
