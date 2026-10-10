@@ -1,0 +1,39 @@
+fetchmail (6.4.23-1) unstable; urgency=medium
+
+    For common ssh-based IMAP PREAUTH setups (i. e. those that use a plugin
+    - no matter its contents - and that set auth ssh), change the STARTTLS
+    error message to suggest sslproto '' instead.
+    This is a commonly reported issue after the CVE-2021-39272 fix in
+    6.4.22.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 11 Dec 2021 17:12:55 +0100
+
+fetchmail (6.3.6~rc3-1) unstable; urgency=low
+
+    Using at least one of the options "sslproto 'tls1'", "sslfingerprint" or
+    "sslcertck" enforces STARTTLS for POP3 and IMAP and terminates the connection
+    if unsuccessful. The same configuration causes permanent connection failure
+    with POP2, which is obsolete and does not support STLS.  fetchmail 6.3.5 and
+    older had no way to enforce TLS. With those older versions, TLS was always
+    opportunistic, but fetchmail would happily transmit the password in cleartext
+    if STARTTLS failed.
+    Configurations using --ssl --sslcertck however have been safe.
+
+ -- Nico Golde <nico@ngolde.de>  Tue, 21 Nov 2006 17:39:37 +0100
+
+fetchmail (6.3.1-1) unstable; urgency=low
+
+    File /etc/default/fetchamil has been added to stablish if user wants to
+    start fetchmail on boot or not.
+    On install time we try to determine from old version if start or not.
+    Default will be to not start.
+    This addition is necessary since upgrades of the package while the users
+    hadn't finish to configure fetchmail properly were breaking the upgrade.
+    This had bitten quite a few users.
+    The fetchmail-ssl dummy package has been removed since it is no longer
+    needed.
+  	Due to #327250 fetchmail home directory (/var/run/fetchmail) changed to
+    /var/lib/fetchmail
+
+ -- Hector Garcia <hector@debian.org>  Mon, 9 Jan 2006 23:24:29 +0100
+

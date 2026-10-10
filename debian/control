@@ -1,0 +1,31 @@
+Source: fetchmail
+Section: mail
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Build-Depends: debhelper-compat (= 11), pkg-config, flex, libssl-dev (>= 1.1), bison, libkrb5-dev, libgssglue-dev
+Standards-Version: 4.5.0
+Homepage: http://www.fetchmail.info
+
+Package: fetchmail
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, debianutils (>= 1.7), adduser (>= 3.34), lsb-base (>= 3.2-13)
+Breaks: logcheck (<< 1.1.1-9), fetchmail-ssl (<= 6.2.5-12)
+Conflicts: fetchmail-common
+Replaces: fetchmail-common, fetchmail-ssl
+Provides: fetchmail-ssl
+Suggests: fetchmailconf, default-mta | mail-transport-agent, resolvconf
+Recommends: ca-certificates
+Description: SSL enabled POP3, APOP, IMAP mail gatherer/forwarder
+ fetchmail is a free, full-featured, robust, and well-documented remote mail
+ retrieval and forwarding utility intended to be used over on-demand TCP/IP
+ links (such as SLIP or PPP connections).  It retrieves mail from remote mail
+ servers and forwards it to your local (client) machine's delivery system, so
+ it can then be read by normal mail user agents such as mutt, elm, pine,
+ (x)emacs/gnus, or mailx.  The fetchmailconf package includes an interactive
+ GUI configurator suitable for end-users.
+ .
+ Kerberos V and GSSAPI are supported.
+ .
+ Kerberos IV,  RPA, OPIE and other support for some other features are
+ available if the package is recompiled.

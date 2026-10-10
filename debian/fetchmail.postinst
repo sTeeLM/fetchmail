@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# Postinst script for fetchmail
+# $Id: fetchmail.postinst 469 2008-05-18 12:47:05Z nion $
+#
+
+set -e
+
+# Create fetchmail user and its homedir if we may need it
+if ! getent passwd fetchmail >/dev/null; then
+	adduser --system --ingroup nogroup --home /var/lib/fetchmail \
+	--shell /bin/false --disabled-password fetchmail
+fi
+
+# if the login shell is not /bin/false, change this, see #481727
+LOGINSH=$(getent passwd fetchmail | cut -d ':' -f 7)
+if [ "x$LOGINSH" != "x/bin/false" ]; then
+	chsh -s /bin/false fetchmail
+fi
+
+if ! [ -d /var/lib/fetchmail ]; then
+    mkdir -p /var/lib/fetchmail
+fi
+chmod 700 /var/lib/fetchmail
+chown -h -R fetchmail:nogroup /var/lib/fetchmail
+
+#DEBHELPER#
+
+exit 0
+
+# vim:ts=4:sw=4:

@@ -1,0 +1,83 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+#
+# $Id: rules 504 2010-02-02 11:40:24Z hector $
+#
+# Originally by Henrique M. Holschuh <hmh@debian.org>, and based on
+# previous work by Paul Haggard <phaggart@debian.org>, and in a
+# debmake-created rules file.
+#
+# Special package build-time options:
+#   POP2, RPA, NTLM, SDPS, OPIE, KRB4, KRB5, GSSAPI
+#   NOPOP3, NOIMAP, NOETRN, NOODMR, IPV6, IPV6SEC
+#
+# To use them, add the ones you need to the environment variable
+# DEB_FETCHMAIL_BUILD_OPTIONS before building the package.
+#
+# e.g.
+# export DEB_FETCHMAIL_BUILD_OPTIONS="KRB4,NOIMAP,NOETRN,NOODMR"
+# dpkg-buildpackage -rfakeroot -uc -us
+#
+# If DEB_FETCHMAIL_BUILD_OPTIONS is undefined, SSl, NTLM and SDPS will
+# be enabled by default.
+#
+# The targets KRB4, KRB5, GSSAPI and OPIE require the proper libraries
+# to be installed in the system.
+#
+# IPV6 and IPV6SEC support is untested, and breaks the 'interface'
+# keyword (which is why they will not be enabled by default).
+
+# Defaults for official debian package
+DEB_FETCHMAIL_BUILD_OPTIONS ?= "SSL,NTLM,SDPS,KRB5,GSSAPI"
+
+# Process build-time options
+translate_option = $(if $(findstring $1,$(DEB_FETCHMAIL_BUILD_OPTIONS)),$2)
+FETCHCONFOPT := \
+  $(call translate_option,SSL,    --with-ssl=/usr) \
+  $(call translate_option,POP2,   --enable-POP2) \
+  $(call translate_option,RPA,    --enable-RPA) \
+  $(call translate_option,NTLM,   --enable-NTLM) \
+  $(call translate_option,SDPS,   --enable-SDPS) \
+  $(call translate_option,OPIE,   --enable-opie) \
+  $(call translate_option,KRB4,   --with-kerberos=/usr) \
+  $(call translate_option,KRB5,   --with-kerberos5) \
+  $(call translate_option,GSSAPI, --with-gssapi=/usr) \
+  $(call translate_option,NOPOP3, --disable-POP3) \
+  $(call translate_option,NOIMAP, --disable-IMAP) \
+  $(call translate_option,NOETRN, --disable-ETRN) \
+  $(call translate_option,NOODMR, --disable-ODMR) \
+  $(call translate_option,IPV6,   --enable-inet6)
+
+# enable hardening
+DEB_BUILD_MAINT_OPTIONS := hardening=+all
+DPKG_EXPORT_BUILDFLAGS := 1
+DEB_CFLAGS_MAINT_APPEND := -Wall -pipe
+include /usr/share/dpkg/buildflags.mk
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-nls \
+		--disable-rpath --disable-fallback \
+		$(FETCHCONFOPT)
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -rf debian/fetchmail/usr/lib/
+	rm -f debian/fetchmail/usr/bin/fetchmailconf \
+		debian/fetchmail/usr/share/man/man1/fetchmailconf.1
+	install -D -m 755 debian/resolvconf \
+		debian/fetchmail/etc/resolvconf/update-libc.d/fetchmail
+
+override_dh_installinit:
+	dh_installinit --restart-after-upgrade
+
+override_dh_auto_test:
+
+%:
+	dh $@
+
+.PHONY: override_dh_auto_configure override_dh_auto_install \
+	override_dh_installinit	override_dh_auto_test

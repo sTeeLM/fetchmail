@@ -1,0 +1,26 @@
+Description: Remove forced OpenSSL version check
+ Not needed, linker should take care of proper library loading.
+Author: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Bug-Debian: https://bugs.debian.org/973472
+Forwarded: no
+Last-Update: 2021-12-08
+
+---
+
+--- a/socket.c
++++ b/socket.c
+@@ -1098,12 +1098,12 @@ int SSLOpen(int sock, char *mycert, char
+ 	    }
+ 	}
+ #endif
+-
++/*
+ 	if (ver < OPENSSL_VERSION_NUMBER) {
+ 	    report(stderr, GT_("Loaded OpenSSL library %#lx older than headers %#lx, refusing to work.\n"), (long)ver, (long)(OPENSSL_VERSION_NUMBER));
+ 	    return -1;
+ 	}
+-
++*/
+ 	if (ver > OPENSSL_VERSION_NUMBER && outlevel >= O_VERBOSE) {
+ 	    report(stdout, GT_("Loaded OpenSSL library %#lx newer than headers %#lx, trying to continue.\n"), (long)ver, (long)(OPENSSL_VERSION_NUMBER));
+ 	}

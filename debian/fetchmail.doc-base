@@ -1,0 +1,10 @@
+Document: fetchmail
+Title: Fetchmail Documentation
+Author: Eric S. Raymond, Matthias Andree, Carl E. Harris, George M. Sipe
+Abstract: This documentation covers the FAQ and features of fetchmail. 
+Section: Network/Communication
+
+Format: HTML
+Index: /usr/share/doc/fetchmail/fetchmail-features.html
+Files: /usr/share/doc/fetchmail/fetchmail-*.html
+

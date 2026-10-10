@@ -1,0 +1,2900 @@
+fetchmail (6.4.27-1ubuntu0.1) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: DoS via 334 reply from SMTP server
+    - debian/patches/CVE-2025-61962.patch: avoid NULL+1 deref on invalid
+      AUTH reply in smtp.c.
+    - CVE-2025-61962
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 08 Oct 2025 07:40:28 -0400
+
+fetchmail (6.4.27-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 30 Jan 2022 15:50:35 +0100
+
+fetchmail (6.4.26-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update watch file.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 03 Jan 2022 13:30:25 +0100
+
+fetchmail (6.4.25-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add user systemd unit configuration file (closes: #981464).
+  * Document upstream ssh authentication change due to CVE-2021-39272 fix
+    (closes: #999606).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 11 Dec 2021 16:41:33 +0100
+
+fetchmail (6.4.24-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 24 Nov 2021 18:41:23 +0100
+
+fetchmail (6.4.23-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update watch file.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 05 Nov 2021 18:44:07 +0100
+
+fetchmail (6.4.22-1) unstable; urgency=high
+
+  * New upstream release:
+    - fix CVE-2021-39272: fail to enforce STARTTLS session encryption in
+      some circumstances (closes: #993163).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 15 Sep 2021 19:04:31 +0200
+
+fetchmail (6.4.21-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fix envelope segmentation fault (closes: #992400).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 18 Aug 2021 20:00:28 +0200
+
+fetchmail (6.4.16-5) unstable; urgency=medium
+
+  * Backport upstream regression fix for 6.4.20's security (CVE-2021-36386)
+    fix.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 09 Aug 2021 20:06:48 +0200
+
+fetchmail (6.4.16-4) unstable; urgency=high
+
+  * Backport upstream security fix for CVE-2021-36386: denial of service or
+    information disclosure when logging long messages.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 29 Jul 2021 00:18:56 +0200
+
+fetchmail (6.4.16-3) unstable; urgency=medium
+
+  * Fix operation autopkgtest.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 26 Jun 2021 23:53:00 +0200
+
+fetchmail (6.4.16-2) unstable; urgency=medium
+
+  * Backport upstream fix for memory leak in timeout situation for LOGIN auth.
+  * Backport upstream man page update.
+  * Sync with Ubuntu.
+
+  [ Bryce Harrington <bryce@canonical.com> ]
+  * d/t/control: Invoke upstream testsuite via make check.
+  * d/t/control, d/t/operation, d/t/mock-pop3-server.py: Add DEP8 test
+    for checking fetchmail's POP3 functionality.
+    (LP: #1677818)
+
+  [ Francesco P. Lovergine <frankie@debian.org> ]
+  * Only pass pidfile to fetchmail in daemon mode (closes: #989929).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 24 Jun 2021 18:37:01 +0200
+
+fetchmail (6.4.16-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 13 Feb 2021 08:47:50 +0100
+
+fetchmail (6.4.15-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 09 Jan 2021 11:00:33 +0100
+
+fetchmail (6.4.14-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 29 Nov 2020 14:29:05 +0100
+
+fetchmail (6.4.13-2) unstable; urgency=medium
+
+  * Remove forced OpenSSL version check (closes: #973472).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 19 Nov 2020 19:28:12 +0100
+
+fetchmail (6.4.13-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 29 Oct 2020 06:47:13 +0100
+
+fetchmail (6.4.12-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update watch file.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 04 Sep 2020 17:04:47 +0200
+
+fetchmail (6.4.11-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 30 Aug 2020 07:29:47 +0200
+
+fetchmail (6.4.8-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 15 Jun 2020 18:35:31 +0200
+
+fetchmail (6.4.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 31 May 2020 18:32:17 +0200
+
+fetchmail (6.4.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 16 May 2020 10:16:46 +0000
+
+fetchmail (6.4.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 28 Apr 2020 18:55:30 +0000
+
+fetchmail (6.4.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update watch file.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 19 Apr 2020 12:00:51 +0000
+
+fetchmail (6.4.2-2) unstable; urgency=medium
+
+  * Allow stderr on service testing.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 16 Feb 2020 15:52:30 +0000
+
+fetchmail (6.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Sync with Ubuntu.
+
+  [ Bryce Harrington <bryce@canonical.com> ]
+  * d/tests: Add basic dep8 test cases.  This adds a trivial test to
+    verify installation of the main bits, and that the service is up
+    and running.  Partially addresses LP #1677818 "Missing dep8
+    tests", however a true fix will also test email fetching from a
+    (local) mail service.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 15 Feb 2020 19:03:16 +0000
+
+fetchmail (6.4.2~rc3-1) unstable; urgency=medium
+
+  * New upstream RC release.
+  * Update Standards-Version to 4.5.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 11 Feb 2020 21:38:49 +0000
+
+fetchmail (6.4.1-1) unstable; urgency=medium
+
+  * New upstream release:
+    - fix default file locations regression,
+    - fix regression under _FORTIFY_SOURCE where
+      PATH_MAX > minimal _POSIX_PATH_MAX (closes: #941308).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 28 Sep 2019 14:17:50 +0000
+
+fetchmail (6.4.0-1) unstable; urgency=medium
+
+  * New major upstream release:
+    - fix pidfile behavior (closes: #941129).
+  * Update watch file.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 28 Sep 2019 06:58:50 +0000
+
+fetchmail (6.4.0~rc4-2) unstable; urgency=medium
+
+  * Remove all parts of fetchmailconf (closes: #939522).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 05 Sep 2019 22:22:32 +0000
+
+fetchmail (6.4.0~rc4-1) unstable; urgency=medium
+
+  * New major upstream RC release.
+  * Remove outdated and Python 2 only fetchmailconf package (closes: #936512).
+  * Drop merged in patches.
+  * Update remaining patches.
+  * Remove old upgrade code from postinst.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 02 Sep 2019 18:33:18 +0000
+
+fetchmail (6.4.0~rc3-1) unstable; urgency=medium
+
+  * New major upstream RC release.
+  * Properly report size of mailboxes of 2 GB or above (closes: #873668).
+  * Update Standards-Version to 4.4.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 24 Aug 2019 16:49:45 +0000
+
+fetchmail (6.4.0~rc2-1) unstable; urgency=medium
+
+  * New major upstream RC release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 20 Aug 2019 06:06:00 +0000
+
+fetchmail (6.4.0~rc1-1) unstable; urgency=medium
+
+  * New major upstream RC release:
+    - set umask properly before writing the .fetchids file (closes: #831611),
+    - fix clang null pointer checks to prevent potential segfaults.
+  * Backport fix to no longer reports System error during SSL_connect():
+    Success (closes: #928916).
+  * Sync with Ubuntu.
+
+  [ nick black <dankamongmen@gmail.com> ]
+  * Use full path for invoke-rc.d (closes: #926743).
+
+  [ Russell Coker <russell@coker.com.au> ]
+  * Fix init.d script typo that breaks labelling for SE Linux
+    (closes: #922616).
+
+  [ Bryce Harrington <bryce@canonical.com> ]
+  * TLS: set hostname for SNI.
+
+
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 05 Aug 2019 22:35:46 +0000
+
+fetchmail (6.4.0~beta4-3) unstable; urgency=medium
+
+  * Backport fix potential SIGSEGV in pop3_delete (closes: #921450).
+  * Backport native name verification for OpenSSL.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 06 Feb 2019 16:33:00 +0000
+
+fetchmail (6.4.0~beta4-2) unstable; urgency=medium
+
+  * Upload to Sid.
+  * Update Standards-Version to 4.3.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 03 Feb 2019 15:45:40 +0000
+
+fetchmail (6.4.0~beta4-1) experimental; urgency=medium
+
+  * New major upstream beta release:
+    - improved TLS support (closes: #768843).
+  * Update watch file.
+  * Disable Vcs-* fields for now.
+  * Update debhelper level to 11:
+    - remove dh-autoreconf build dependency,
+    - remove autotools-dev build dependency,
+    - don't specify parallel to debhelper,
+    - specify restart-after-upgrade to dh_installinit .
+  * Update Standards-Version to 4.1.4 .
+
+  [ Russell Coker <russell@coker.com.au> ]
+  * Run restorecon after creating directory from init script (closes: #752598).
+
+  [ Nicolas Boulenguez <nicolas@debian.org> ]
+  * Packaging updates (closes: #895366):
+    - rename d/init to d/fetchmail.init, as recommended by policy,
+    - give standard formatting to header of 01_fetchmailconf.patch ,
+    - remove obsolete debian/pycompat ,
+    - fix typo in manpage,
+    - delegate installation of ppp and logcheck scripts to debhelper,
+    - delegate manpages from dh_install to more specialized
+      dh_installmanpages ,
+    - install contrib files and resolvconf directly without intermediate copy
+      in debian/tmp ,
+    - switch copyright to format 1.0 and add some missing licenses.
+    - delegate buggy installation of README.contrib to debhelper,
+    - per policy 4.0.0, use invoke-rc.d instead of calling /etc/init.d/*
+      directly,
+    - rules: drop paragraphe preparing unused variable CONFFLAGS ,
+    - rules: simplify some variable affectations,
+    - delegate build flags stuff to dpkg-buildflags .
+
+  [ Kevin Ryde <user42_kevin@yahoo.com.au> ]
+  * Let fetchmail-mode run hook after other settings (closes: #710319).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 23 Jun 2018 15:52:22 +0000
+
+fetchmail (6.3.26-3) unstable; urgency=low
+
+  * Use short debhelper rules format.
+  * Update packaging to fix FTBFS if building in parallel (closes: #828299).
+  * Let debhelper handle invoke-rc.d and update-rc.d calls.
+  * Add dh-autoreconf to build dependency.
+  * Remove unneeded dpkg-dev build dependency.
+  * Update Standards-Version to 3.9.8 and debhelper level to 9 .
+  * Remove Nico Golde from uploaders per request.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 03 Nov 2016 21:07:11 +0000
+
+fetchmail (6.3.26-2) unstable; urgency=low
+
+  * New maintainer (closes: #800750), keep Nico and Hector as uploaders.
+  * Backport upstream fix for SSLv3 removal (closes: #804604) and do not
+    recommend SSLv3 (closes: #801178).
+  * Version OpenSSL build dependency for TLSv1.2 support.
+  * Remove quilt from build depends and its usage.
+  * Add dh-python to build depends.
+  * Update upstream URLs.
+  * Update watch file.
+  * Update Standards-Version to 3.9.6 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 03 Oct 2015 16:32:13 +0200
+
+fetchmail (6.3.26-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fix mimedecode option dropping last message line in certain
+      situations (Closes: #706045).
+  * remove 03_fix_command_line_combination.patch and
+    02_cert-verification-memleak.patch, included upstream.
+  * Bump standards version, no changes required.
+  * Change Vcs URI to canonical URI.
+  * Explicitly add postfix to Should-Start for LSB init script
+    (Closes: #631781).
+  * Add proper Default-Stop entries to LSB init script header.
+  * Simplify resolvconf script as resolvconf doesn't call scripts
+    anymore with --nscd (Closes: #699425).
+
+ -- Nico Golde <nion@debian.org>  Sat, 11 May 2013 12:23:25 +0200
+
+fetchmail (6.3.22-2) unstable; urgency=low
+
+  * Fix memory leak in OpenSSL's certificate varification callback.
+    Thanks Erik Thiele and Dominik! (Closes: #688015).
+  * Fix combination of --plugin and -f - (Closes: #671294).
+
+ -- Nico Golde <nion@debian.org>  Mon, 17 Dec 2012 13:04:01 +0100
+
+fetchmail (6.3.22-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fix minor DoS in NTLM message handling (CVE-2012-3482).
+    - Clears SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS as a precaution
+      against "BEAST" attacks (CVE-2011-3389).
+  * Removed 03_ssl_cert_logging.patch, incorporated by upstream.
+  * Removed 02_fetchmail-kill-sslv2.patch, incorporated by upstream.
+  * Do not log disabled daemon message as warning (Closes: #672724).
+  * Raise standards version, no changes required.
+  * Add LSB description header to init script.
+
+ -- Nico Golde <nion@debian.org>  Thu, 30 Aug 2012 15:46:27 +0200
+
+fetchmail (6.3.21-4) unstable; urgency=low
+
+  * Fix building with build-arch (Closes: #671026).
+
+ -- Nico Golde <nion@debian.org>  Tue, 01 May 2012 18:56:24 +0200
+
+fetchmail (6.3.21-3) unstable; urgency=low
+
+  * Build with hardening compiler flags (Closes: #653538).
+    - Add Build-Depends on dpkg-dev (>= 1.16.1~).
+    - Use buildflags.mk snippet in debian/rules.
+    - Make all hardening flags default for DEB_BUILD_MAINT_OPTIONS.
+  * Use log_warning_msg rather than echo to inform user that the
+    fetchmail daemon has been disabled.
+
+ -- Nico Golde <nion@debian.org>  Thu, 29 Dec 2011 18:55:30 +0100
+
+fetchmail (6.3.21-2) unstable; urgency=low
+
+  * Do not log server certificate message to stderr in verbose mode
+    (Closes: #639807).
+  * debian/control: Drop XS-Python-Version to allow dh_python2 to create
+    symlinks to all supported python versions (Closes: #626100).
+    patch was missing in previous upload.
+  * Only awake fetchmail via resolvconf, if it is actually
+    running (Closes: #612179).
+    patch was broken in previous upload.
+
+ -- Nico Golde <nion@debian.org>  Sun, 04 Sep 2011 16:00:50 +0200
+
+fetchmail (6.3.21-1) unstable; urgency=low
+
+  * New upstream release
+    - Do not insert null byte into the last line of a message under
+      certain circumstances in the IMAP client (Closes: #638773).
+  * debian/control: Drop XS-Python-Version to allow dh_python2 to create
+    symlinks to all supported python versions (Closes: #626100).
+  * Only awake fetchmail via resolvconf, if it is actually
+    running (Closes: #612179).
+  * Adjust 02_fetchmail-kill-sslv2.patch, german po changes have been
+    applied by upstream.
+  * debian/control: extend long description for fetchmailconf.
+  * debian/rules: introduce new build-arch/build-indep targets.
+
+ -- Nico Golde <nion@debian.org>  Mon, 29 Aug 2011 19:20:00 +0200
+
+fetchmail (6.3.19-1) unstable; urgency=low
+
+  [Nico Golde]
+  * New upstream release.
+  * Bump standards version, no changes needed.
+  * Converting from python-central to dh_python2 (Closes: #616806)
+    - Removed python-central from dependencies
+    - Bump minimum python version to 2.6.6-3~
+    - Removed XB-Python-Version
+    - Add dh_python2 call to binary-indep, remove dh_pycentral
+  * Removed 02_man_page.patch, changes included upstream.
+  * Add 02_fetchmail-kill-sslv2.patch (thanks Matthias!) to fix FTBFS
+    due to openssl 1.0.0 dropping ssl v2 support (Closes: #622054).
+
+  [Hector Garcia]
+  * Removed the part from 01_fetchmailconf.patch where it touches
+    Makefile.in file and removed 03_fetchmailconf_python2.6.patch.
+
+ -- Nico Golde <nion@debian.org>  Wed, 13 Apr 2011 12:57:14 +0200
+
+fetchmail (6.3.18-2) unstable; urgency=low
+
+  * Fix python module path for fetchmailconf (Closes: #603861).
+
+ -- Nico Golde <nion@debian.org>  Wed, 01 Dec 2010 23:20:37 +0100
+
+fetchmail (6.3.18-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Remove 03_spurious-ssl-cert-warning.patch, included upstream.
+    - Cancel GSSAPI authentication properly when encountering GSS
+      errors (Closes: #568455, #593694).
+    - Don't complain about READ-ONLY IMAP folders in --fetchall --keep
+      mode (Closes: #348995).
+  * Bump standards version, no changes needed.
+
+ -- Nico Golde <nion@debian.org>  Mon, 11 Oct 2010 23:53:31 +0200
+
+fetchmail (6.3.17-4) unstable; urgency=low
+
+  * Removed update-rc.d fetchmail remove (Closes: #587902, #587855).
+
+ -- Hector Garcia <hector@debian.org>  Fri, 02 Jul 2010 15:02:10 +0200
+
+fetchmail (6.3.17-3) unstable; urgency=low
+
+  * Removed stop on level 1. (Closes: #587367).
+  * Included doc-base information about the .html files in docs.
+  * Changed Conflicts for Breaks.
+  * Bumped standards-version to 3.9.0
+  * Cleaned Makefile after configure to prevent unnecesary linking against
+    libcrypt and libk5crypto.
+
+ -- Hector Garcia <hector@debian.org>  Wed, 30 Jun 2010 12:41:12 +0200
+
+fetchmail (6.3.17-2) unstable; urgency=low
+
+  [Nico Golde]
+  * Add Should-Start and Should-Stop facilities to the init script
+    in order to make sure fetchmail is started after a local DNS
+    server and/or MTA if present. Thanks to Jan Braun and Petter
+    Reinholdtsen (Closes: #582475).
+  * Add 03_spurious-ssl-cert-warning.patch to prevent fetchmail complaining
+    about an insecure ssl connection even if a fingerprint that has been
+    obtained through a secure channel is configured (Closes: #580796).
+
+  [Hector Garcia]
+  * Changed suggest of exim4 to default-mta (Closes: #586864, #586865).
+  * Not explicitly stop daemon on runlevel 0 and 6 (Closes: #498427).
+  * Make it compile against python2.6. Thanks to Steve Langasek
+    (Closes: #586866, #586867).
+  * Updated man page patch to include more minus escaped form.
+
+ -- Nico Golde <nion@debian.org>  Thu, 24 Jun 2010 13:52:43 +0200
+
+fetchmail (6.3.17-1) unstable; urgency=low
+
+  * New upstream release.
+    - Drop fetchmail-SA-2010-02.patch, included upstream, this
+      patch also introduced a regression that was fixed with this
+      release as well.
+  * Add status option to init script and incorporate changes
+    by Peter Eisentraut, thanks! (Closes: #527967).
+    - Bump lsb depedency to 3.2-13.
+
+ -- Nico Golde <nion@debian.org>  Fri, 07 May 2010 19:20:00 +0200
+
+fetchmail (6.3.16-2) unstable; urgency=medium
+
+  * Add fetchmail-SA-2010-02.patch fixing a possible DoS on invalid
+    multibyte sequences in message headers when used with -vv.
+
+ -- Nico Golde <nion@debian.org>  Mon, 19 Apr 2010 14:40:41 +0200
+
+fetchmail (6.3.16-1) unstable; urgency=low
+
+  * New upstream release.
+    - Load all SSL ciphers (Closes: #576430).
+    - Fix regression when using --interface (Closes: #576717).
+
+ -- Nico Golde <nion@debian.org>  Thu, 08 Apr 2010 20:03:55 +0200
+
+fetchmail (6.3.15-1) unstable; urgency=low
+
+  * New upstream release.
+    - Log an unexpected BYE from the server when using imap
+      (Closes: #140631, #215688).
+  * Removing Hectors NEWS entry as it was a plain copy of the changelog
+    (Closes: #569207).
+  * Remove 03_sdump_heap_overflow.patch, included upstream.
+  * Switch to 3.0 (quilt) source format.
+  * Fix incorrect version number in NEWS file: 6.3.6.rc3-1 -> 6.3.6~rc3-1.
+
+ -- Nico Golde <nion@debian.org>  Sat, 03 Apr 2010 19:57:08 +0200
+
+fetchmail (6.3.13-2) unstable; urgency=medium
+
+  * Add 03_sdump_heap_overflow.patch to fix heap overflow in verbose SSL
+    certificate information display (fetchmail-SA-2010-01).
+  * Some fixed issues for 6.3.13:
+    - Russion translation for flushed fixed (Closes: #531925).
+    - Fetchmail no longer drops permanently undelivered messages by
+      default, to match historic documentation. It does so by introducing
+      a new softbounce option (Closes: #471283).
+    - Report multiline SMTP errors properly (Closes: #529899).
+  * Also do not complain about /etc/fetchmailrc on calling the init
+    script with stop (Closes: #546841).
+
+ -- Nico Golde <nion@debian.org>  Thu, 04 Feb 2010 13:02:29 +0100
+
+fetchmail (6.3.13-1) unstable; urgency=low
+
+  * New upstream version.
+  * Removed 02_nooverlapping_snprintf.patch no longer needed.
+  * Removed 03_smb_assert.patch no longer needed.
+  * Removed 04_fix_fetchsetup_bashism.patch no longer needed.
+  * Removed 05_fetchlimit_exist_status.patch no longer needed.
+  * Removed 06_cert_0_byte.patch no longer needed.
+  * Bump to policy version 3.8.4
+  * Added README.source explaining that this package uses quilt.
+  * Added 02_man_page.patch to fix 2 man page minor bugs.
+  * Added ${misc:Depends} on control for both binaries.
+
+ -- Hector Garcia <hector@debian.org>  Mon, 01 Feb 2010 16:45:58 +0100
+
+fetchmail (6.3.9~rc2-8) unstable; urgency=low
+
+  * Do not complain about missing config file when daemon shouldn't
+    start at all (Closes: #540533).
+  * Depend on $syslog in init script (Closes: #541394).
+
+ -- Nico Golde <nion@debian.org>  Thu, 13 Aug 2009 23:14:16 +0200
+
+fetchmail (6.3.9~rc2-7) unstable; urgency=low
+
+  * Fix inconsistencies in init script.
+  * Fix double inclusion of /etc/default/fetchmail (Closes: #540245).
+
+ -- Nico Golde <nion@debian.org>  Fri, 07 Aug 2009 16:30:08 +0200
+
+fetchmail (6.3.9~rc2-6) unstable; urgency=high
+
+  * Bump to policy version 3.8.2
+    + don't rely on /etc/default/fetchmail in init script but provide
+      default (no) for START_DAEMON and check if file exists.
+  * debian/rules: dh_clean -k is deprecated => dh_prep.
+  * Include upstream patch to fix off-by-one asserts in smbutil.c
+    (03_smb_assert.patch; Closes: #449179).
+  * Fix bashism in fetchsetup script
+    (04_fix_fetchsetup_bashism.patch; Closes: #530081).
+  * Fix exit status of fetchmail when used with --fetchlimit
+    option (05_fetchlimit_exist_status.patch; Closes: #508667).
+  * Add upstream patch to detect malicious certificates containing
+    a null byte in the Subject Alternative Name
+    (CVE-2009-2666; 06_cert_0_byte.patch).
+
+ -- Nico Golde <nion@debian.org>  Thu, 06 Aug 2009 12:44:26 +0200
+
+fetchmail (6.3.9~rc2-5) unstable; urgency=low
+
+  * Set -e flag in prerm and preinst to ensure that the script aborts
+    its execution on failed commands.
+  * Add 02_nooverlapping_snprintf.patch to prevent undefined behaviour on
+    using snprintf with overlapping buffers.
+
+ -- Nico Golde <nion@debian.org>  Mon, 22 Dec 2008 16:10:32 +0100
+
+fetchmail (6.3.9~rc2-4) unstable; urgency=low
+
+  * Fix broken debug-run as the login shell of fetchmail
+    was changed to /bin/false by passing -s to su (Closes: #492745).
+
+ -- Nico Golde <nion@debian.org>  Sat, 09 Aug 2008 14:13:32 +0200
+
+fetchmail (6.3.9~rc2-3) unstable; urgency=low
+
+  * Updated debian/resolvconf to call awake instead of try-restart.
+  	(Closes: #488085).
+
+ -- Hector Garcia <hector@debian.org>  Fri, 04 Jul 2008 18:28:29 +0200
+
+fetchmail (6.3.9~rc2-2) unstable; urgency=low
+
+  * Fix broken init script by dropping usage of su and use
+    -c by start-stop-daemon instead to switch to the fetchmail
+    user (Closes: #487943).
+
+ -- Nico Golde <nion@debian.org>  Wed, 25 Jun 2008 13:27:01 +0200
+
+fetchmail (6.3.9~rc2-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fix CVE-2008-2711: possible denial of service vulnerability if used
+      with -vv when parsing large data blobs because of an uninitialized
+      argument pointer.
+    - Allow .fetchmailrc and .fetchids to be symlinks (Closes: #452907).
+    - The manual page now mentions that user descriptions need to come before
+      user options (Closes: #467010).
+  * Drop 04_fix_CVE-2007-4565_DoS.patch as this release fixes the issue.
+  * Drop 03_capa_probe.patch as this is fixed in this release.
+  * Drop 02_es.po.patch included upstream.
+  * Drop 05_fix-manpage-grammar.patch included upstream.
+  * Bump Standards version to 3.8.0, no changes needed.
+  * Bump debhelper compatibility level to 7 and adapt build dependency.
+
+ -- Nico Golde <nion@debian.org>  Tue, 24 Jun 2008 20:49:38 +0200
+
+fetchmail (6.3.8-12) unstable; urgency=low
+
+  * Set login shell of fetchmail user to /bin/false on
+    installation and upgrade (Closes: #481727).
+
+ -- Nico Golde <nion@debian.org>  Sun, 18 May 2008 14:29:37 +0200
+
+fetchmail (6.3.8-11) unstable; urgency=low
+
+  * Add removal of /var/run/fetchmail to postrm script (Closes: #463987).
+  * Fix grammar in manpage (05_fix-manpage-grammar.patch; Closes: #461642).
+  * Bump standards version to 3.7.3, no changes needed.
+  * Fix obsolete national encoding in copyright file.
+  * Fix "cryptic" comment in init file (Closes: #464549).
+
+ -- Nico Golde <nion@debian.org>  Mon, 04 Feb 2008 16:19:17 +0100
+
+fetchmail (6.3.8-10) unstable; urgency=low
+
+  * Build-depend on libgssglue instead of libgssapi since it replaced
+    gssapi.
+  * Chaged $@ to $* in su call in debug-run to fix broken
+    quoting, thanks Klaus Ethgen (Closes: #447061).
+  * Switched from Homepage tag to new Homepage field in control.
+  * Switched from Xs-Vcs-Svn to Vcs-Svn since this is implemented
+    in dpkg now.
+  * Fixed malformed date line in changelog and syntax-error in NEWS.
+
+ -- Nico Golde <nion@debian.org>  Sat, 03 Nov 2007 18:43:13 +0100
+
+fetchmail (6.3.8-9) unstable; urgency=low
+
+  * Fixed init to detect -d parameter on OPTIONS var. (Closes: #443327)
+
+ -- Hector Garcia <hector@debian.org>  Thu, 20 Sep 2007 12:05:09 +0200
+
+fetchmail (6.3.8-8) unstable; urgency=high
+
+  * Including fix_CVE-2007-4565_DoS patch to fix
+    Denial of Service vulnerability in sink.c
+    (CVE-2007-4565) (Closes: #440006).
+  * Fixed fetchmailconf menu sections.
+
+ -- Nico Golde <nion@debian.org>  Wed, 29 Aug 2007 12:05:09 +0200
+
+fetchmail (6.3.8-7) unstable; urgency=low
+
+  * Changed long description to fit current state of
+    compiled-in features.
+
+ -- Nico Golde <nion@debian.org>  Thu, 19 Jul 2007 16:40:13 +0200
+
+fetchmail (6.3.8-6) unstable; urgency=low
+
+  * Do not suppress error output for make distclean in rules.
+  * Build with gssapi support (Closes: #433423).
+
+ -- Nico Golde <nion@debian.org>  Mon, 09 Jul 2007 00:07:54 +0200
+
+fetchmail (6.3.8-5) unstable; urgency=low
+
+  * Included patch to fix errors on failed
+    CAPA probe (Closes: #421446).
+
+ -- Nico Golde <nion@debian.org>  Thu, 14 Jun 2007 15:08:38 +0200
+
+fetchmail (6.3.8-4) unstable; urgency=low
+
+  * Disable error message about editing /etc/default/fetchmail if
+    init stop is called. This way you don't see the message on a
+    package removal.
+  * Added KRB5 support (Closes: #427405).
+
+ -- Nico Golde <nion@debian.org>  Sat, 19 May 2007 18:33:55 +0200
+
+fetchmail (6.3.8-3) unstable; urgency=low
+
+  * Updated patch for spanish translation, synced with
+    upstream SVN.
+
+ -- Nico Golde <nion@debian.org>  Mon, 14 May 2007 16:23:15 +0200
+
+fetchmail (6.3.8-2) unstable; urgency=low
+
+  * Imported ubuntu changes in init script.
+  * Added OPTIONS= to default file and enabled init
+    script to use them (Closes: #389454).
+  * Included upstream es.po, thanks Javier Fernández-Sanguino Peña
+    (Closes: #420474).
+
+ -- Nico Golde <nion@debian.org>  Wed, 11 Apr 2007 18:12:15 +0200
+
+fetchmail (6.3.8-1) unstable; urgency=low
+
+  * New upstream release.
+    - Make the APOP challenge parser more distrustful and have it reject
+      challenges that do not conform to RFC-822 msg-id format, in the hope to make
+      mounting man-in-the-middle attacks (MITM) against APOP a bit more difficult
+      (CVE-2007-1558).
+    - Fix manual page: --sslcheck -> --sslcertck (Closes: #413059).
+    - Fix segfault on NULL pointer reference in bsmtp (Closes: #416625).
+    - Make BSMTP output actually work (Closes: #416812).
+  * Changed my maintainer address.
+  * Added watch file again and updated to version 3.
+  * Fixed spelling mistake in fetchmail.default.
+  * Bumped compat level since we already depend on debhelper >= 5.
+  * Removed dirs file, not needed anymore.
+  * Added delete-after and delete-after.README to contrib files.
+
+ -- Nico Golde <nion@debian.org>  Sun, 08 Apr 2007 16:40:42 +0200
+
+fetchmail (6.3.7-1) unstable; urgency=medium
+
+  * New upstream release.
+
+  [ Nico Golde ]
+  * Removed UIDL file creation code from init,
+    no longer needed (Closes: #406391).
+  * Removed watch file since Berlios doesn't allow
+    scanning anymore.
+  * Added logrotate script to contrib.files.
+
+  [ Hector Garcia ]
+  * Make try-restart only do the start if the runlevel allow so.
+    (Closes: #406126).
+
+ -- Nico Golde <nico@ngolde.de>  Tue,  6 Feb 2007 17:40:54 +0100
+
+fetchmail (6.3.6-1) unstable; urgency=medium
+
+  [New upstream version]
+  * Repair --user: using SSL certificate/key authentication overrode the
+    --user option.  Now the latter takes precedence, and only defaults to the
+    certificate's common name (Closes: #400950).
+  * DNS: Detect /etc/resolv.conf changes: On systems that have res_search(),
+    assume we also have res_init() and call it (suggested by Ulrich Drepper,
+    glibc bug #3675) in order to make libc or libresolv reread the resolver
+    configuration at the beginning of a poll cycle.  This is important when
+    fetchmail is in daemon mode and /etc/resolv.conf is changed later by
+    dhcpcd, dhclient, pppd, openvpn or other ip-up/ipchange scripts
+    (Closes: #389270, #391698).
+  * Important security fixes for: CVE-2006-5867 and CVE-2006-5974.
+  [Nico Golde]
+  * added NEWS file to the packages (Closes: #406328).
+
+ -- Nico Golde <nico@ngolde.de>  Mon,  8 Jan 2007 17:57:40 +0100
+
+fetchmail (6.3.6~rc5-1) unstable; urgency=medium
+
+  [Nico Golde]
+  * Added LC_ALL=C export into default file to switch of
+    localized log messages (Closes: #400719).
+  * Removed gettext dependency since libc on Debian ships its own
+    gettext functions (Closes: #402030).
+  * Finally removed popclient conflicts, thanks Tobias Frost for pointing
+    this bug (Closes: #262257).
+
+ -- Nico Golde <nico@ngolde.de>  Fri,  1 Dec 2006 18:27:17 +0100
+
+fetchmail (6.3.6~rc3-1) unstable; urgency=medium
+
+  [New upstream version]
+  * sslproto keywords are now case insensitive
+  * In verbose mode, log every IP fetchmail tries to connect to, to avoid
+    misleading the user. Suppress EAFNOSUPPORT errors from socket() call, too.
+    (Closes: #361825)
+  * Track getaddrinfo() results to properly free them after timeouts and
+    make sure that getaddrinfo() isn't interrupted by a timeout.
+    (Closes: #294547, #377135).
+  * If the lockfile ends before the process ID, treat it as stale and unlink it.
+    Reported by Justin Pryzby, (Closes: #376603).
+  * SECURITY FIX (CHANGES BEHAVIOR):
+    Using at least one of the options "sslproto 'tls1'", "sslfingerprint" or
+    "sslcertck" enforces STARTTLS for POP3 and IMAP and terminates the connection
+    if unsuccessful. The same configuration causes permanent connection failure
+    with POP2, which is obsolete and does not support STLS.  fetchmail 6.3.5 and
+    older had no way to enforce TLS. With those older versions, TLS was always
+    opportunistic, but fetchmail would happily transmit the password in cleartext
+    if STARTTLS failed.  Reported by and fixed in cooperation with Isaac Wilcox.
+    Configurations using --ssl --sslcertck however have been safe.
+
+  [Nico Golde]
+  * Source-Version is deprecated, using source:Version now,
+    thanks Tolimar for the hint.
+  * Added colons in init to fit debian-policy
+    section 9.4 (Closes: #398160).
+  * Changed awaken call to restart cause of DNS problems (Closes: #391698).
+  * Added NEWS entry to inform about behaviour changes.
+  * Added XS-Vcs-Svn field to control file.
+  * Added debian/pycompat file.
+  * Updated debhelper dependency to version (>= 5.0.37.2) because of dh_python
+    call.
+  [Hector Garcia]
+  * Changed depend of fetchmailconf to >= instead of =, to
+    be able to do binary rebuilds.
+  * Migrated from dpatch to quilt.
+  * Removed 02_ja.po-fix, no longer needed.
+  * Removed 03_imap_experimental. Included upstream.
+  * Removed 04_eof_fix. Included upstream.
+
+ -- Hector Garcia <hector@debian.org>  Thu, 23 Nov 2006 11:35:01 +0100
+
+fetchmail (6.3.4-7) unstable; urgency=low
+
+  * Start using lsb init script. Patch by Christian Perrier.
+    (Closes: #388843)
+
+ -- Hector Garcia <hector@debian.org>  Sun, 24 Sep 2006 21:59:01 +0200
+
+fetchmail (6.3.4-6) unstable; urgency=low
+
+  [Hector Garcia]
+  * Applied patch suggested by upstream (Matthias Andree)
+    to fix build when DEB_FETCHMAIL_BUILD_OPTIONS includes
+    KRB5. (Closes: #223820)
+  [Nico Golde]
+  * Fixed problem with ja.po file because of new gettext version
+    (Closes: #385160).
+
+ -- Hector Garcia <hector@debian.org>  Wed,  6 Sep 2006 22:18:56 +0200
+
+fetchmail (6.3.4-5) unstable; urgency=low
+
+  [ Nico Golde ]
+  * Fixed broken symlink, thanks to Piotr Ozarowski (Closes: #383177).
+
+  [ Hector Garcia ]
+  * Changed try-restart to awaken fetchmail if it is running or start it if
+    it is not. (Closes: 268346)
+
+ -- Hector Garcia <hector@debian.org>  Wed, 16 Aug 2006 11:51:51 +0200
+
+fetchmail (6.3.4-4) unstable; urgency=low
+
+  [ Nico Golde ]
+  * Fixed awakening bug in init script (Closes: #380459).
+  * Fixed EOF handling, patch can be removed after fetchmail 6.3.5
+    release (Closes: #376603).
+  * Bumped Standards-Version.
+
+  [ Piotr Ozarowski ]
+  * Updated for the new python policy (Closes: #380794).
+  * Replaced /usr/bin/fetchmailconf shell script with symlink
+      and thus removed 01.fetchmailconf patch.
+
+  [ Hector Garcia ]
+  * Added bison to build-depends.
+
+ -- Hector Garcia <hector@debian.org>  Tue,  1 Aug 2006 10:44:26 +0200
+
+fetchmail (6.3.4-3) unstable; urgency=low
+
+  [ Nico Golde ]
+  * Removed not needed removal of /etc/default/fetchmail in postrm
+    script, thanks Justin Pryzby for the hint (Closes: #374473).
+
+ -- Nico Golde <nico@ngolde.de>  Mon, 19 Jun 2006 20:03:26 +0200
+
+fetchmail (6.3.4-2) experimental; urgency=low
+
+  [ Nico Golde ]
+  * Added head -n1 to get the fetchmail pid from pid file in init since it
+    does not contain only one line (Closes: #366539).
+
+  [ Hector Garcia ]
+  * Added patch from Matthias Andree to fix IMAP (Closes: #312415).
+
+ -- Hector Garcia <hector@debian.org>  Mon, 15 May 2006 13:00:41 +0200
+
+fetchmail (6.3.4-1) unstable; urgency=low
+
+  [ Hector Garcia ]
+  * New upstream release
+    -  pidfile: there is a new command-line (--pidfile PATH) and global option
+       for the rcfile (set pidfile [=] "/path/to/pidfile") option to allow
+       overriding the default location of the PID file.
+  * Removed es.po patch, integrated upstream.
+  * Changed init.d to use new flag --pidfile to place pid file on
+    /var/run/fetchmail/fetchmail.pid (Closes: #355457)
+  * Changed ip-up and ip-down to use invoke-rc.d
+
+  [ Nico Golde ]
+  * Checked for new policy version and changed it in control.
+
+ -- Hector Garcia <hector@debian.org>  Tue,  2 May 2006 14:24:51 +0200
+
+fetchmail (6.3.3-1) unstable; urgency=low
+
+  [ Nico Golde ]
+  * Added true return values to fetchmail.postinst so postinst will not fail
+    if fetchmailrc is empty (Closes: #355187).
+  * Removed syslog patch to not change old behaviour (Closes: #356675).
+    Reopened #282259.
+  * Modified homepage tag in control to fit with the new address.
+  * Removed && true crap from init script.
+
+  [ Hector Garcia ]
+  * New upstream release
+    - SDPS: fetchmail no longer replaces the local user ID for an empty
+      envelope sender when using the proprietary SDPS extension for POP3.
+      (Closes: #353575)
+    - "ssl" is a user option rather than a server option. Patch by Nico Golde.
+      (Closes: #354661)
+    - --idle and --fetchall can now be specified on the command line, too.
+  * Updated es.po.dpatch
+  * Removed null-env-sender.dpatch, is included upstream.
+  * Removed 01.fix-netrc-sigsegv, is included upstream.
+  * Added dh_python and deleting .pyc and *.pyo from packages
+  * Changed init.d to remove stale pid file.
+
+ -- Hector Garcia <hector@debian.org>  Tue,  4 Apr 2006 10:54:49 +0200
+
+fetchmail (6.3.2-3) unstable; urgency=low
+
+  [ Nico Golde ]
+  * Fixed watch file, thanks Bart Martens. (Closes: #354357)
+  * Included temporary patch to fix null envelope sender problem,
+    will be fixed with next upstream version. (Closes: #353575)
+
+ -- Nico Golde <nico@ngolde.de>  Sat, 25 Feb 2006 20:51:10 +0100
+
+fetchmail (6.3.2-2) unstable; urgency=low
+
+  [ Nico Golde ]
+  * included 01.fix-netrc-sigsegv patch to fix a segmentation fault
+    if no password for an account in netrc is set. Will be included in
+    next upstream release.
+
+  [ Hector Garcia ]
+  * Included 02.fix-print-date patch to fix regresion on log notification.
+    Is included on upstream devel branch. (Closes: #282259)
+
+ -- Hector Garcia <hector@debian.org>  Fri,  3 Feb 2006 11:19:49 +0100
+
+fetchmail (6.3.2-1) unstable; urgency=low
+
+  [ Nico Golde ]
+  * New upstream release
+    - Security fix of CVE-2006-0321 (Closes: #348747).
+    - Fix help for poll interval and fetchall in
+      fetchmailconf (Closes: #344978).
+    - Don't complain about READ-ONLY IMAP folders in
+       --fetchall --keep mode (Closes: #348964).
+  * Removed 01_man_page.dpatch file upstream included it.
+  * Fixed watch file to match on bz2 files.
+
+  [ Hector Garcia ]
+  * Changed usermod --home to -d to prevent failure on old versions of passwd.
+    (Closes: #348855)
+
+ -- Hector Garcia <hector@debian.org>  Tue, 24 Jan 2006 16:46:51 +0100
+
+fetchmail (6.3.1-4) unstable; urgency=low
+
+  [ Nico Golde ]
+  * Fixed broken symlink (Closes: #348134).
+  * removed gzip of fetchmailconf.1 cause we should ignore it,
+    it points to a wrong fetchmail manpage so we set a symlink
+    manually.
+
+  [ Hector Garcia ]
+  * Reverted pidfile location (Closes: #348037).
+  * Removed #!/usr/bin/env python from fetchmailconf.py since it
+    is used as a lib not as a script. New dpatch file.
+
+ -- Hector Garcia <hector@debian.org>  Mon, 16 Jan 2006 10:27:04 +0100
+
+fetchmail (6.3.1-3) unstable; urgency=low
+
+  [ Nico Golde ]
+  * Fixed FTBFS on buildds (Closes: #347996).
+
+  [ Hector Garcia ]
+  * Moving fetchmail.pid instead of deleting it on upgrade to prevent
+    failure on first reboot (Closes: #348037).
+  * Fixed bug that emptyed /etc/default/fetchmail.
+
+ -- Hector Garcia <hector@debian.org>  Sun, 15 Jan 2006 03:34:05 +0100
+
+fetchmail (6.3.1-2) unstable; urgency=low
+
+  * Added usr/lib/python2.3/site-packages/ to fetchmailconf install files to
+    fix breakage from last upload.
+
+ -- Hector Garcia <hector@debian.org>  Fri, 13 Jan 2006 13:11:13 +0100
+
+fetchmail (6.3.1-1) unstable; urgency=low
+
+  [ Nico Golde ]
+  * New upstream release
+    - Fixed tracepolls problem for 2nd user in skip stanza (Closes: #156094).
+    - Corrected global option descriptions in manpage (Closes: #241883).
+    - Progress dots will appear now (Closes: #298557).
+    - Fixed manpage typos (Closes: #323028).
+    - Fixed character encoding of fetchmail daemon (Closes: #277324).
+    - Fixed broken subjects in notification mails (Closes: #301348)
+    - uidl usage is not switched on by default anymore (Closes: #304701).
+    - Security fix. CVE-2005-4348 (Closes: #345944).
+    - Ipv6 is now enabled by default (Closes: #345263, #329975).
+  * Removed de.po fix because upstream included it.
+  * Added Homepage tag to control file.
+  * Update manpage patch to current version.
+  * Removed flex and bison from build depends, they are no longer needed.
+  * Fetchmail now uses gettext.
+  * Removed --enable-ipv6 (its default now) and --enable-netsec cause
+    it is no longer working.
+  * Added call to make update-gmo to fix localisation problems (Closes: #340630).
+  * Updated copyright file.
+  * Removed LoÃ¯c Minier from uploaders.
+  * Added fetchmail-ssl removal to NEWS file.
+  * Removed xutils dependency because makedepend is not necessary since 6.3.0.
+  * Moved fetchmail home directory to /var/lib/fetchmail (Closes: #327250).
+  * Removed NEWS.truncated file from installation and replaced with OLDNEWS.
+
+  [ Hector Garcia ]
+  * Remove man1 from mandir on install time. (change on the packaging).
+  * Added myself to uploaders.
+  * Added patch to fix warning on fetchmail man page. Should submit upstream.
+  * Included gettext on build-depend.
+  * Included patch to update es.po. Already sended patch to usual translator.
+  * Added /etc/default/fetchmail to define when to start fetchmail or not
+    (Closes: #344582, #218040, #276044).
+  * Added NEWS.Debian to explain above.
+  * Made changes on control file to delete properly old fetchmail-ssl. I must
+    ask ftpmaster to delete it from archive.
+  * Removed depend on base-files (>= 2.2.0). Woody was released with 3.0.2
+  * Fixed a problem on debian/rules that was forcing configure to be called twice.
+  * Changed UIDL file to /var/lib/fetchmail/.fetchmail-UIDL-cache since now
+    upstream needs to write more files on same dir, hence /var/mail it is not
+    suitable.
+  * Added python to build-depends.
+
+ -- Hector Garcia <hector@debian.org>  Fri, 13 Jan 2006 12:01:10 +0100
+
+fetchmail (6.3.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Security fix. CVE-2005-2335 and CVE-2005-3088
+    - Drop support for OS not conforming to the Single Unix Specification v2
+      or v3 (aka IEEE Std 1003.1-2001).
+    - Default for --smtphost is now always "localhost".
+    - Force fetchsizelimit to 1 for APOP and RPOP.
+    - Patch, to use a NULL envelope from, not write a Return-Path header (both to
+      meet RFC-2821), changed From, added Subject header, rewording the human
+      readable part.  (Closes: #316446).
+    - Patch to avoid a segfault in multidrop/received mode when the
+      Received: headers are malformatted.
+    - MIME-encode bodies and Subject headers of warning messages, limiting
+      the header to 7 bits.
+    - Normalize most locale codesets to IANA codesets.
+    - Nico Golde's patch to support "proto RPOP" in the configuration file,
+      reported. (Closes: #242384)
+    - Added Russian translation.
+    - Dropped da=Danish, el=Greek and tr=Turkish translations which have more
+      than 10% (61+) untranslated or fuzzy messages.
+    - Major fetchmail(1) manual page overhaul.
+    - Fix fetchmail leaks sockets when SSL negotiation fails.
+      (Closes: #301964).
+    - Really fix (garbage in Received: lines when smtphostset).
+      (Closes: #207919).
+    - When writing the PID file, write a FHS 2.3 compliant PID file.
+      (Closes: #230615).
+    - Make ODMR really silent, suppress "fetchmail: receiving message data".
+     (Closes: #296163).
+    - Add From: header to warning emails. (Closes: #244828).
+    - Fix IMAP code to use password of arbitrary length from configuration
+      file (although not when read interactively). (Closes: #276424).
+    - Document that fetchmail may automatically enable UIDL option.
+      (Closes: #304701).
+    - Put *BOLD* text into the manual page near --mda to state unmistakably
+      that the --mda %T and %F substitutions add single quotes, hoping to avoid
+      bogus bug reports. (Closes: #224564).
+    - gettext (intl/) has been removed from the fetchmail package.
+    - Use of automake.
+    - Rename fetchmailconf to fetchmailconf.py. Created a /bin/sh wrapper.
+    - New dummy fetchmailconf manual page.
+    - fetchmailconf redirects fetchmail's input from /dev/null so it doesn't
+      wait for the user to enter a password when the user doesn't even see the prompt.
+    - Write RFC-compliant BSMTP envelopes.
+    - Received: headers now enclose the for <...> destination address in angle
+      brackets for consistency with Postfix.
+    - Delete oversized messages with the new --limitflush option.
+      (Closes: #212240).
+    - Add full support for --service option.
+    - Make "envelope 'Delivered-To'" work with dropdelivered.
+    - fetchmail should now automatically detect if OpenSSL requires -ldl
+    - Missed --port/--service/--ssl cleanups in the manual.
+    - Properly shut down SSL connections.
+    - Add support for SubjectAltName (RFC-2595 or 2818), to avoid bogus certificate
+      mismatch errors. Patch by Roland Stigge, Debian Bug#201113. (MA)
+    - make fetchmail --silent --quit really silent. (Closes: #229014)
+    - Exit with error if the lock file cannot be read.
+    - Do not break some other process's lockfile in "-q" mode, but wait for
+      the other process's exit.
+    - Man page: --sslfingerprint points user to x509(1ssl) and gives an
+         example how to use it. (Closes: #213484)
+    - Try to obtain FQDN as our own host by default, rather than using
+     "localhost". If hostname cannot be qualified, complain noisily and continue,
+      unless Kerberos, ODMR or ETRN are used (these require a FQDN).
+      Partial fix of Debian Bug#150137. (Closes: #316454).
+    - fetchmailconf now sets the service properly after autoprobe.
+      (Closes: #320645).
+    - When eating IMAP message trailer, don't see any line containing "OK"
+      as the end of the trailer, but wait for the proper tagged OK line. To work
+      around the qmail + Courier-IMAP problem in Debian. (Closes: #338007).
+    - Fixes: when trying to send a bounce message, don't bail out if we cannot
+      qualify our own hostname, so we aren't losing the bounce. Instead, pass the
+      buck on to the SMTP server and use our own unqualified hostname.
+      (Closes: #317761)
+    - Updated translations: Albanian [sq] (Besnik Bleta), Catalan [ca] (Ernest
+      AdroguÃ© Calveras), Czech [cs] (Miloslav Trmac), German [de] (MA),
+      Spanish (Castilian) [es] (Javier Kohen), French [fr] (MA),
+      Polish [pl] (Jakub Bogusz), Russian [ru] (Pavel Maryanov).
+    - In oversized warning messages, print the account name, too.
+      (Closes: #213299).
+  * Remove man1 from mandir on install time. (change on the packaging).
+  * Deleted es.po patch. Included upstream. Updated 00list.
+  * Added myself to uploaders.
+  * Added patch to fix warning on fetchmail man page. Should submit upstream.
+
+ -- Hector Garcia <hector@debian.org>  Wed, 21 Dec 2005 13:18:58 +0100
+
+
+fetchmail (6.2.5.4-1) unstable; urgency=high
+
+  [ Lucas Wall ]
+    - pidfile checking in init.d script (closes: #323637).
+
+  [ Nico Golde ]
+    - Only create fetchmail user if it doesn't exist (closes: #330522,#321272).
+    - respect the permissions of fetchmail home.
+    - rebuild against latest openssl version.
+    - removed deletion of /etc/fetchmailrc,
+      see statement in BTS. (closes: #288063).
+    - adjusted legal notes (Thanks Marc Brockschmidt for the hint).
+
+  [ Loic Minier ]
+  * New upstream stable releases.
+    - Fix password exposure in fetchmailconf: use umask 077 before opening
+      output file and restore umask later. (Closes: #336096)
+      This is CVE-2005-3088.
+    - Drop 01pop3sec.dpatch, included upstream.
+    - Fix IMAP timeouts, counting message count down on servers that do not
+      send EXISTS counts after EXPUNGE. (Closes: #314509)
+    - Unlist spanish translation patch for now, as the spanish translation was
+      completely destroyed upstream.
+  * Add myself to Uploaders.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 15 Nov 2005 18:53:37 +0100
+
+fetchmail (6.2.5-18) unstable; urgency=low
+
+  * Nico Golde:
+    - fixed too late apply of dpatch patches
+    - fixed init script (closes: #320584)
+
+ -- Lucas Wall <lwall@debian.org>  Sat, 30 Jul 2005 13:11:15 -0300
+
+fetchmail (6.2.5-17) unstable; urgency=high
+
+  * Nico Golde:
+    - reverted change of MTA because exim4 should be the default MTA in debian
+      (closes: #320311).
+    - included patch for Spanish translation (closes: #286044).
+    - included patch for German translation (closes: #313699).
+
+ -- Lucas Wall <lwall@debian.org>  Thu, 28 Jul 2005 11:27:53 -0300
+
+fetchmail (6.2.5-16) unstable; urgency=high
+
+  * Nico Golde:
+    - changed suggests exim4 to postfix because of personal preference
+    - renewed copyright file
+    - added dpatch to build dependencies
+    - removed fetchmail.NEWS file cause it is no longer current
+    - new upstream patch because of security issue CAN-2005-2335
+
+ -- Nico Golde <nico@ngolde.de>  Fri, 22 Jul 2005 08:01:03 -0200
+
+fetchmail (6.2.5-15) unstable; urgency=high
+
+  * Nico Golde:
+    - fixed buffer overrun in pop3 UIDs handling CAN-2005-2335
+      http://fetchmail.berlios.de/fetchmail-SA-2005-01.txt
+      (closes: #212762)
+
+ -- Lucas Wall <lwall@debian.org>  Thu, 21 Jul 2005 13:25:10 -0300
+
+fetchmail (6.2.5-14) unstable; urgency=low
+
+  * Nico Golde:
+    - Remove fetchmailrc if package is purged. (closes: #288063)
+    - modified /etc/fetchmailrc message so it only will be printed
+      if $1 is start
+    - corrected Maintainers field in control
+
+ -- Lucas Wall <lwall@debian.org>  Sun, 17 Jul 2005 14:21:34 -0300
+
+fetchmail (6.2.5-13) unstable; urgency=low
+
+  * New maintainers. (closes: #295331)
+  * Lucas Wall:
+    - Removed debconf dependency (debconf was dropped in 6.2.5-1).
+    - Added build-dep on autotools-dev and switched to "copy
+      config.{guess,sub} on build schema".
+  * Nico Golde:
+    - Updated watch file.
+    - Improved init script.
+    - Removed conflict with popclient. (closes: #262257)
+    - Fixed pid file creation. (closes: #263447)
+    - Included contrib/fetchsetup into package. (closes: #303789)
+    - fixed broken esmtp support patch. (closes: #285934)
+
+ -- Lucas Wall <lwall@debian.org>  Fri, 24 Jun 2005 20:36:36 -0300
+
+fetchmail (6.2.5-12) unstable; urgency=medium
+
+  * Provide fetchmail-ssl package to facilitate upgrades from woody.
+
+ -- Graham Wilson <graham@debian.org>  Mon, 29 Nov 2004 00:43:30 +0000
+
+fetchmail (6.2.5-11) unstable; urgency=medium
+
+  * Check to see if the fetchmail user exists before starting the system-wide
+    fetchmail service. If not, re-add the user. This is to avoid problems when
+    the user purges a fetchmail-common package from woody. (closes: #268228)
+  * Only install the NEWS file in the fetchmail package.
+
+ -- Graham Wilson <graham@debian.org>  Tue, 14 Sep 2004 17:05:44 +0000
+
+fetchmail (6.2.5-10) unstable; urgency=low
+
+  * Fix resolvconf script error. (closes: #257647)
+
+ -- Graham Wilson <graham@debian.org>  Mon, 05 Jul 2004 08:11:07 +0000
+
+fetchmail (6.2.5-9) unstable; urgency=low
+
+  * Don't use -a with test. (closes: #252093)
+  * Update the server logcheck ignore file. (closes: #253022)
+  * Update the resolvconf script. (closes: #252807)
+
+ -- Graham Wilson <graham@debian.org>  Fri, 11 Jun 2004 19:50:36 +0000
+
+fetchmail (6.2.5-8) unstable; urgency=low
+
+  * Add a note to README.Debian concerning errors when using the UIDL file.
+  * Fix checking of "set no syslog" in the init script. (closes: #243142)
+  * Remove documentation about UIDL cache transition, since we no longer handle
+    that specially.
+  * Add a patch from Paul Slootman to use uname(2), instead of uname(1) in
+    interface_init. (closes: #224778)
+  * Clean up documentation of the 'antispam' option. (closes: #241878)
+  * Document 'set no syslog' in the example rc file.
+  * When determining /proc/net/dev format, assume post-Linux 2.2 by default.
+
+ -- Graham Wilson <graham@debian.org>  Fri, 14 May 2004 07:06:34 +0000
+
+fetchmail (6.2.5-7) unstable; urgency=medium
+
+  * Don't output dots if we are loggin to syslog. (closes: #217610)
+  * Don't handle the case where the UIDL cache is in root's home directory.
+    Users have had all of woody to take care of moving that file.
+  * Document in NEWS how options should be set now that /etc/default/fetchmail
+    doesn't exist. (closes: #242755)
+  * Don't add the syslog option to the command line if the user has 'set
+    no syslog' in /etc/fetchmailrc. (closes: #242165)
+  * Apply patch for the debug mode in the init script. Thanks to Ilguiz
+    Latypov. (closes: #240598)
+  * Set the permissions correctly on the UIDL cache file. (closes: #241649)
+
+ -- Graham Wilson <graham@debian.org>  Fri, 09 Apr 2004 01:06:56 +0000
+
+fetchmail (6.2.5-6) unstable; urgency=medium
+
+  * Rename NEWS.Debian to NEWS, so that it gets installed.
+  * Use a better check for the daemon option in the system-wide
+    fetchmailrc file. (closes: #240699)
+  * Update the sample fetchmailrc to reflect the current state of the
+    fetchmail package.
+  * Create the UIDL cache file if it doesn't exist and we are going to
+    use it. Hopefully this fixes it. (closes: #237703)
+
+ -- Graham Wilson <graham@debian.org>  Fri, 02 Apr 2004 04:07:14 +0000
+
+fetchmail (6.2.5-5) unstable; urgency=low
+
+  * Reformat NEWS.Debian, and try to make it more accurate as to the changes.
+  * Don't discard output from the ip-up script.
+  * Use normal fetchmail PID file format. This re-opens #230615.
+    (closes: #235519, #240159)
+  * Only call fetchmail with the --daemon option if system-wide config file
+    doesn't. (closes: #236105, #238036)
+  * Reread config file if we are re-execing ourselves. Thanks to Jeff Norman
+    for the patch. (closes: #202787)
+  * Correct man page documentation concerning using --quit with other
+    options. (closes: #226822)
+  * Change owner of UIDL cache file if it exists. (closes: #237703)
+
+ -- Graham Wilson <graham@debian.org>  Fri, 26 Mar 2004 05:07:34 +0000
+
+fetchmail (6.2.5-4) unstable; urgency=low
+
+  * Install logcheck ignore files correctly, and add a line to the workstation
+    file. (closes: #234713)
+
+ -- Graham Wilson <graham@debian.org>  Wed, 25 Feb 2004 23:19:47 +0000
+
+fetchmail (6.2.5-3) unstable; urgency=low
+
+  * Make return codes and messages comply with the LSB. (closes: #234352)
+  * Correctly detect if the running process is backgrounded. (closes: #234387)
+  * Fix error in ja.po. (closes: #233634)
+  * Set fetchsizelimit = 1 for all POP3 variants. (closes: #234268)
+  * Quote x11 in the menu file to make lintian happy.
+  * Update standards version to 3.6.1 (no changes).
+
+ -- Graham Wilson <graham@debian.org>  Wed, 25 Feb 2004 22:50:38 +0000
+
+fetchmail (6.2.5-2) unstable; urgency=low
+
+  * Thanks to Thomas Hood for his help with this release.
+
+  * Suggest resolvconf.
+  * Rename the init script in the debian/ directory.
+  * Minor man page fixes. (closes: #231072)
+  * Use FHS compliant lock format. (closes: #230615)
+  * Under try-restart, just re-invoke the script with the restart argument.
+  * Don't die if /etc/fetchmailrc has the wrong permissions.
+  * Clean up in postrm, including calling dh_purge and not complaining
+    so much.
+  * Correct the test in try-restart. (closes: #230613)
+  * Call invoke-rc.d with the --quiet option.
+
+ -- Graham Wilson <graham@debian.org>  Sun, 22 Feb 2004 03:18:40 +0000
+
+fetchmail (6.2.5-1) experimental; urgency=low
+
+  * This release is mostly a rewrite of postinst, rules, and the init
+    script; I have tried to clean them up some, and to add some
+    improvements. (closes: #221115)
+
+  * Use invoke-rc.d in postinst and prerm. (closes: #218040)
+  * In ip-up, only restart fetchmail if it is running. (closes: #222535)
+  * Rip out all of the debconf-related stuff. (closes: #215818)
+
+  * In debian/rules:
+    - correctly support noopt and nostrip
+    - use dh_install in favor of dh_movefiles
+    - move commands from install target to binary-arch target
+    - use debian/compat instead of DH_COMPAT
+
+  * Documentation updates:
+    - clean up README.Debian and try to clarify some things
+    - update the copyright file
+    - add a NEWS file
+
+  * Add a watch file for uscan.
+  * Add support for resolvconf.
+
+  * New upstream release.
+
+ -- Graham Wilson <graham@debian.org>  Fri, 30 Jan 2004 02:24:01 +0000
+
+fetchmail (6.2.4-7) unstable; urgency=low
+
+  * Suggest exim4 instead of exim. (closes: #228593)
+
+ -- Graham Wilson <graham@debian.org>  Tue, 20 Jan 2004 17:33:25 +0000
+
+fetchmail (6.2.4-6) unstable; urgency=low
+
+  * Build the postinst file for the binary-arch target. (closes: #225396)
+
+ -- Graham Wilson <graham@debian.org>  Mon, 29 Dec 2003 18:20:39 +0000
+
+fetchmail (6.2.4-5) unstable; urgency=low
+
+  * Replace autogen.sh with a new script.
+  * Remove config.status & Makefile on distclean.
+  * debian/rules:
+    - Don't automatically run autogen.sh.
+    - Don't automatically update config.sub or config.guess
+    - Remove the need for configure-stamp.
+    - Remove uneeded variables.
+    - Clean up `clean' and `config.status' targets.
+    - Update --build and --host usage.
+  * Don't need {executable,deletable}.files
+  * Remove old control and changelog files.
+  * Convert changelog to UTF-8.
+  * Update es.po, thanks Carlos Valdivia YagÃ¼e. (closes: #220926)
+  * Fix numerous small errors in the manpage.
+  * debian/control:
+    - New maintainer. Thanks Benjamin. (closes: #221919)
+    - Trim the build-depends list.
+    - Don't need to build-depend on m-t-a, since it was only used for
+      fallback selection.
+
+ -- Graham Wilson <graham@debian.org>  Tue, 23 Dec 2003 17:18:07 +0000
+
+fetchmail (6.2.4-4) unstable; urgency=low
+
+  * Fix postinst bugs (closes: #216630)
+  * Remove if-up crap, which was a bad idea(tm) (closes: #216503, #217985)
+  * Update russian and danish translation (closes: #214355, #216330)
+  * Clean up source tree from old templates (closes: #217434)
+
+ -- Benjamin Drieu <benj@debian.org>  Tue, 28 Oct 2003 22:35:27 +0100
+
+fetchmail (6.2.4-3) unstable; urgency=low
+
+  * Fix a typo in new if-up.d/fetchmail script (closes: #212554).
+
+ -- Benjamin Drieu <benj@debian.org>  Mon, 29 Sep 2003 08:27:32 +0200
+
+fetchmail (6.2.4-2) unstable; urgency=low
+
+  * Hack sink.c again to handle smtpname gracefully (Closes: #207919).
+  * Fix a bug that prevented limit and flush to cooperate (closes: #212240).
+  * Update Brazilian (closes: #207967), French (closes: #208999), Japanese
+    (closes: #211015) and Dutch (closes: #211148) debconf translations.
+  * Add a /etc/network/if-up.d/fetchmail script to handle restarted
+    interfaces (closes: #212554).
+
+ -- Benjamin Drieu <benj@debian.org>  Sun, 28 Sep 2003 15:18:40 +0200
+
+fetchmail (6.2.4-1) unstable; urgency=medium
+
+  * The "Let fix some bugs" release
+  * New upstream version:
+    + Updated German, Spanish, Catalan, and Turkish translations.
+    + IDLE is now supported using no-ops even if the server doesn't
+      support the IMAP IDLE extension. (closes: #202308)
+    + Sunil Shetye's patch to do better password shrouding.
+      (closes: #200470)
+    + Sunil Shetye's bug-fix rollup patch.
+      - Protocol errors do to incorrect assumption of protocols being able
+        to skip bodies (Closes: #203319, #201829, #207281, #204602)
+      - Avoid useless reconnections with limit & expunge (closes: #202207)
+      - Fix some auth problems (closes: #197813, #199462, #200208)
+      - Fix a parse error in fetchmailrc (closes: #184078)
+      - Finally fix the broken headers bug
+        (closes: #146690, #170941, #197007)
+    + Introduce a translation item for the word "seen". (closes: #158050)
+    + Back out the hack to deal with lack of byte stuffing on some POP3
+      servers.
+    + Thomas Steudten's patch to improve SMTP handling of 550 errors.
+  * Switch to po-debconf based templates (closes: #200361)
+  * Make sure we use the pidfile (closes: #207295)
+  * Fix a small typo in manpage (closes: #205892)
+
+ -- Benjamin Drieu <benj@debian.org>  Thu, 28 Aug 2003 15:47:25 +0200
+
+fetchmail (6.2.3-1) unstable; urgency=low
+
+  * New upstream version:
+    - German, Danish, Spanish, and Turkish translations updated.
+    - Brian Sammon's patch to deal with malformed message lines containiing NULs.
+    - Fai's patch to ignore all but the first Return-Path (some spams have
+      more than one of these) (closes: #192977).
+    - Bendebjamin Drieu's patch to properly byte-stuff when talking to BSNTP
+      (closes: #184469).
+    - Benjamin Drieu's patch to enable auth=cram-md5. (closes: #185232)
+    - Sunil Shetye's configure.in patch to avoid spurious search order messages
+      from GCC.
+    - Header-reading code now copes better with lines ending in \n only.
+    - Elias Israel's patches for POP3 NTLM support and dealing with byte-
+      stuffing failures at socket level.
+  * Fix my patch fixing #156592 (closes: #188417)
+  * Add a new logcheck patterns (closes: #198274, #202619)
+  * Fix dead links in debian/copyright (closes: #200519)
+
+ -- Benjamin Drieu <bdrieu@april.org>  Mon, 21 Jul 2003 10:49:04 +0200
+
+fetchmail (6.2.2-4) unstable; urgency=low
+
+  * Yet another init.d/fetchmail shell script error.
+
+ -- Benjamin Drieu <benj@debian.org>  Fri,  4 Jul 2003 13:51:35 +0200
+
+fetchmail (6.2.2-3) unstable; urgency=low
+
+  * Fix typo in shell script (closes: #197744)
+
+ -- Benjamin Drieu <benj@debian.org>  Tue, 17 Jun 2003 10:49:37 +0200
+
+fetchmail (6.2.2-2) unstable; urgency=low
+
+  * Do not croak if /usr/share/doc/fetchmail is missing (closes: #197631)
+
+ -- Benjamin Drieu <benj@debian.org>  Mon, 16 Jun 2003 17:01:41 +0200
+
+fetchmail (6.2.2-1) unstable; urgency=low
+
+  * New upstream source:
+   + Sunil Shetye's patch to improve behavior in empty messages.
+     (closes: #173343)
+   + Conform to RFC2595; reissue capability probes after successful
+     STARTTLS negotiation.
+   + Sunil's patch to make handling of failed STARTTLS more graceful.
+   + Sunil's JF2 fix patch for .fetchmailrc security fix.
+   + Christophe GIAUME <christophe@giaume.com> finished the implementation
+     of RFC2177 IDLE.
+   + Jason Tishler's fix patch for Cygwin.
+   + Support ssh-style authentication in POP3
+   + Fix for Debian bug #108977, clean up config file evaluation,
+     by Benjamin Drieu. (already closed in 6.2.1-1)
+  * Provide an example of smtphost (closes: #192710)
+  * Fix two errors in manpage (closes: #180917, #189918)
+  * Fix init.d script not to override conffile's idfile option
+    (closes: #190762)
+
+ -- Benjamin Drieu <benj@debian.org>  Wed, 11 Jun 2003 13:08:37 +0200
+
+fetchmail (6.2.1-1) unstable; urgency=low
+
+  * New upstream source:
+    + Updated German, Turkish, Spanish, and Danish translation files.
+    + Integrated Sunil Shetye's patch to make mark_seen an explicit method
+    + Removed FAQ warning about GMX and associated fetchmailconf check, we
+      have a report that its servers are conformant now.
+    + Another Sunil patch to fix a minor bug in bouncemail generation
+      (closes: #174795)
+  * Build with libssl-0.9.7
+  * Hack fetchmail.c to prevent excessive config file evaluations
+    (closes: #108977)
+  * Add a "sleep" in init script to make restart happy (closes: #180545)
+  * Remove autom4te.cache after build (closes: #179134)
+  * Make etc files conffiles (closes: #175436)
+
+ -- Benjamin Drieu <benj@debian.org>  Fri, 31 Jan 2003 11:05:11 +0100
+
+fetchmail (6.2.0-3) unstable; urgency=high
+
+  * Rebuilt package with testing dependencies, so that it will hit testing
+    as soon as possible, thus severity is high (will close grave bug #175990).
+  * Fix an attempt to ls conf file even if not created (closes: #174675)
+  * Add a new regexp to logcheck (closes: #176861, 176861)
+  * Update spanish templates (closes: #174402)
+  * Fix a german typo in templates (closes: #174553)
+  * Update man page (closes: #173862)
+
+ -- Benjamin Drieu <benj@debian.org>  Thu, 16 Jan 2003 16:32:16 +0000
+
+fetchmail (6.2.0-2) unstable; urgency=high
+
+  * Attempt to close #169568, which may be caused by a subtle touch behavior
+    on ia64 and alpha.  Many thanks to Lukas Geyer (closes: #169568).
+  * Do not frob conffile unconditionally (closes: #150533)
+
+ -- Benjamin Drieu <benj@debian.org>  Thu, 19 Dec 2002 14:08:48 +0100
+
+fetchmail (6.2.0-1) unstable; urgency=high
+
+  * New upstream version
+    + SECURITY FIX: Applied Steffen Esser's fix for a buffer-overflow
+      bug in rfc822.c
+    + Updated Danish, German, and Turkish translation files.
+    + Sunil Sheye's SMTP timeout patch.
+
+ -- Benjamin Drieu <benj@debian.org>  Wed, 18 Dec 2002 11:41:28 +0100
+
+fetchmail (6.1.3-2) unstable; urgency=low
+
+  * Fix stupid typo that prevented changelog to be installed
+    (closes: #171525)
+  * Add a recommendation on "ca-certificates" on a idea of Andrew Lau
+
+ -- Benjamin Drieu <benj@debian.org>  Fri, 30 Nov 2002 10:40:12 +0100
+
+fetchmail (6.1.3-1) unstable; urgency=low
+
+  * New upstream source
+    + Updated Turkish, Danish, German, Spanish, Catalan po files.
+    + Added Slovak support.
+    + Configure.in update for autoconf 2.5 (Art Haas).
+    + Be case-insensitive when looking for IMAP responses.
+    + Fix logout-after-idle-delivery bug (Sunil Shetye).
+    + Sunil Shetye's patch to bulletproof end-of-header detection.
+      (closes: #146690)
+    + Sunil's fix for the STARTTLS problem -- repoll if TLS nabdshake
+      fails.  The attempt to set up STARTTLS can be suppressed with
+      'sslproto ""'.
+  * Merge fetchmail and fetchmail-ssl into one single source.  Remove
+    fetchmail-common (closes: #164570)
+  * FTBFS for 6.1.2 are not relevant anymore (closes: #169568, #169571)
+  * Do not advertise non-free software in control (closes: #170659)
+  * Hack sink.c to prevent segfaults on null headers while bouncing
+    mail (closes: #170029)
+  * PPP ip-up script now restart fetchmail (closes: #145437)
+
+ -- Benjamin Drieu <benj@debian.org>  Fri, 29 Nov 2002 16:08:00 +0100
+
+fetchmail (6.1.2-1) unstable; urgency=low
+
+  * New upstream source (closes: #164621, #167472, #146690)
+    + Jan Klaverstijn's verbosity-lowering patch.
+    + Updated Turkish, German, Catalan, and Danish translation files.
+    + Fix processing of POP3 messages with missing bodies.
+    + Minor fixes by Sunil Shetye: fix generation of auth fail note,
+      handle unexpected SIGALRM, plug memory leak, handle lines beginning
+      with '\0', try to bulletproof error handling against read failures.
+  * Fix manpage which was outdated regarding antispam capabilities
+    (closes: #167266)
+  * Users should now be able to build custom packages with Kerberos,
+    (closes: #165762)
+
+ -- Benjamin Drieu <benj@debian.org>  Wed, 23 Oct 2002 18:24:18 +0200
+
+fetchmail (6.1.0-2) unstable; urgency=medium
+
+  * Fix trivial fetchmail --configdump bug (closes: #163286)
+  * Fix typo in ROOT_UID checking in fetchmail.c (closes: #163043)
+  * Apply Sunil Shetye patches to fix various IMAP and POP3 SSL problems
+    (closes: #163028, #162566, #162625)
+  * Hack do_session() to avoid not-so-silent "Repoll" messages in silent
+    mode (closes: #162571)
+  * Hack smtp_open() to strip port number that caused invalid email adresses
+    (closes: #156592)
+
+ -- Benjamin Drieu <benj@debian.org>  Wed,  9 Oct 2002 23:12:04 +0200
+
+fetchmail (6.1.0-1) unstable; urgency=low
+
+  * New maintainer (closes: #156667)
+  * New upstream source (closes: #152125):
+    + Updated French translation.
+    + SECURITY FIX: Stefan Esser's fix for potential remote vulnerability
+      in multidrop mode.  This is an important security fix!
+    + Applied Matt Kraai's fixes for minor Debian bugs (Closes: #144539, #152222).
+    + Nerijus Baliunas's patch to support STARTTLS over IMAP.
+    + More cleanups and minor bugfixes from Sunil Shetye (Closes: #117472).
+    + Default antispam-response list is now empty.
+    + Updated de and po translations.
+  * fetchmail-common: Fix wrong path in /etc/init.d/fetchmail (closes: #158323)
+
+ -- Benjamin Drieu <benj@debian.org>  Thu, 26 Sep 2002 16:29:28 +0200
+
+fetchmail (5.9.11-7.0) unstable; urgency=low
+
+  * NrMU (I have RFA'ed this thing, and I MEAN it)
+  * Recompile to get new python dependencies right (closes: #158997)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 16 Sep 2002 13:17:57 -0300
+
+fetchmail (5.9.11-7) unstable; urgency=high
+
+  * Same as woody 5.9.11-6
+  * SECURITY FIX: avoid buffer overflow on 64bit archs (imap.c)
+    This is a remote-expolitable buffer overflow, if the imap server
+    is hostile (backported from new upstream 5.9.12, bug found and
+    fixed by Nalin Dahyabhai)
+  * Minor fix to avoid leaking children (driver.c)
+    (backported from new upstream 5.9.12)
+  * Avoid trying to speak kpop to a imap server (driver.c)
+    (backported from new upstream 5.9.12)
+  * MINOR SECURITY FIX: better password shrounding (fetchmail.h, imap.c,
+    transact.c) (backported from new upstream 5.9.12)
+  * Handle empty addresses from a To: header containing only a comment
+    (transact.c) (backported from new upstream 5.9.12)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  8 Jun 2002 09:40:46 -0300
+
+fetchmail (5.9.11-5) unstable; urgency=low
+
+  * Grrr, fix stupid "be be" typo in package description too, while at
+    it...
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 24 Apr 2002 14:02:42 -0300
+
+fetchmail (5.9.11-4) unstable; urgency=high
+
+  * The "I knew it" release
+  * Hack around STLS problems: fetchmail would try to start STLS even if
+    it was already talking over a secured channel. Thanks to Matt Kraai
+    <kraai@alumni.cmu.edu> for the patch
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 24 Apr 2002 10:54:47 -0300
+
+fetchmail (5.9.11-3) unstable; urgency=high
+
+  * The "May this one be the last upload to woody" release
+  * Fix stupid typo in postrm script that redirected output to dev/null
+    instead of /dev/null (closes: #143145)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 16 Apr 2002 17:03:29 -0300
+
+fetchmail (5.9.11-2) unstable; urgency=high
+
+  * Fix another stupid bug in sink.c: do NOT cause mail to bounce
+    on 553 errors and the like
+  * Fix off-by-one error in base64.c anti-overflow patch from 5.9.10-4,
+    thanks to Ronald Wahl <Ronald.Wahl@informatik.tu-chemnitz.de> for
+    the fix.  This probably fixes KerberosIV auth
+  * imap.c:do_imap_ntlm had the buffer size for from64tobits incorrectly
+    set to the input buffer size (closes: #141969)
+  * I dislike pointer arithmetric a lot, so I fixed base64.c to implement
+    from64tobits properly instead of applying the patch in the bug report
+    (closes: #141972)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue,  9 Apr 2002 12:40:31 -0300
+
+fetchmail (5.9.11-1) unstable; urgency=high
+
+  * New upstream source:
+    + Explicitly allow linking to OpenSSL in COPYING
+      (license change)
+    + Updated Turkish and Japanese translations
+    + Added warning about auth failures on the GMX server
+    + odmr.c: decrease log verbosity
+    (very minor code changes from Debian release 5.9.10-4)
+  * Crypto-in-main change to fetchmail-ssl's control file.
+    fetchmail-ssl has been moved into main, section mail, priority
+    extra.
+  * Matt Kraai's cosmetic env.c changes
+  * Enable Japanese localisation in configure.in
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue,  2 Apr 2002 09:47:30 -0300
+
+fetchmail (5.9.10-4) unstable; urgency=high
+
+  * SECURITY FIX: Avoid buffer overflows in base64.c, patch from
+    Matt Kraai <kraai@debian.org>
+  * Revert crypto-in-main until we can get the fetchmail license
+    straightened out.  I am doing this to get the security patches
+    to the fetchmail-ssl crowd, but *expect fetchmail-ssl to be
+    removed from Debian* if the license issue with OpenSSL is not
+    fixed soon enough.  It certainly will not be in Woody without
+    a license fix.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 27 Mar 2002 13:25:18 -0300
+
+fetchmail (5.9.10-3) unstable; urgency=high
+
+  * SECURITY FIX: Fix lots of buffer overflows lurking in
+    the new SMTP AUTH code in smtp.c (closes: #139644)
+  * Crypto-in-main change to fetchmail-ssl's control file.
+    fetchmail-ssl has been moved into main, section mail, priority
+    extra.
+  * Fix 4xx PS_TRANSIENT patch to shut up gcc warning
+    (utterly safe patch. Add explicit initialization of variable)
+  * Apply Sunil Shetye <shetye@bombay.retortsoft.com>'s patches
+    to detect and fix some format string bugs in fetchmail
+    (safe patch. Adds __attribute__ to some function
+    definitions, and fixes some obviously broken format strings)
+  * Add Catalan templates, thanks to Antoni Bella (safe patch,
+    closes: #139731, #139744)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 25 Mar 2002 13:38:52 -0300
+
+fetchmail (5.9.10-2) unstable; urgency=low
+
+  * The "get this sucker ready for a woody" release
+  * Track down stupid dangerous data-losing bugs in fetchmail:
+    + flushing messages on 4xx + can't send to postmaster
+      This was caused by the multidrop crap. Failover system added
+      that forces return of PS_TRANSIENT (and no bouncing of mail)
+      if any recipient returns a 4xx error. If this causes multidrop
+      misconfiguration to be hard to detect, you will get NO
+      sympathy from this maintainer;  Other users were losing data
+      due to this bug
+    + non-paranoid documentation of default non-empty antispam list:
+      fixed in manpage, README.Debian
+    + non-paranoid documentation of the two always-delete-it codes:
+      fixed in manpage, README.Debian
+    + not always enforcing stripcr for delivery:
+      fixed by removing fallbacks, and upstream fallback stripcr fix
+      (closes: #133876)
+  * Tell people to read fetchmailconf to verify their servers against the
+    blacklist
+  * Add an "your helpful Debian Maintainer" section to top of manpage
+  * Fix minor spelling problem the BTS never delivered to me
+    (closes: #137277)
+  * Fix breakages caused by the new ESMTP AUTH stuff not being completely
+    implemented (closes: #138728)
+  * This upload has STLS support (closes: #138930)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 21 Mar 2002 11:56:07 -0300
+
+fetchmail (5.9.10-1) unstable; urgency=medium
+
+  * New upstream source
+    + Security fix: don't trust the message count passed back by the server
+    + Matt Kraai's patch for supporting STLS over POP3
+    + Jakub Ulanowski's patch to fix SSL fingerprint handling
+    + ESMTP AUTH support from Wojciech Polak <polak@lodz.pdi.net>
+      (closes: #60805)
+  * Apply Byrial Jensen <byrial@image.dk>'s patches for i18n of new
+    5.9.10 messages
+  * Add French template, thanks to Denis Barbier <barbier@debian.org>
+    (closes: #137539)
+  * Apply patch from Sunil Shetye <shetye@bombay.retortsoft.com> to
+    correctly signal failures to open/create a logfile as such, instead
+    of stupid "dup(): illegal FD" cryptic errors
+  * Apply a modified version of a patch from Sylvain Benoist
+    <sylvainb@whitepj.com>, to avoid file descriptor leaks on open
+    timeouts and reenable SSL connect timeouts (closes: #115355).
+    Grr, I never got that last email from the bug submitter, the
+    freaking BTS sent me the spam, though...
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 13 Mar 2002 21:01:56 -0300
+
+fetchmail (5.9.8-4) unstable; urgency=low
+
+  * Fix autoconf support in debian/rules
+  * Add Sunil Shetye's patch to stop fetchmail from trying to fetch
+    twice with IMAP (when EXISTS is not returned on EXPUNGE, old value
+    of count was used)
+  * Added Russian template translation, thanks to Ilgiz Kalmetev,
+    (closes: #136275)
+  * Added Espanish template translation, thanks to Carlos Valdivia,
+    (closes: #135065)
+  * Enforce mode 0600 on /etc/fetchmailrc, since fetchmail insists on it
+    anyway (closes: #135416)
+  * Add warning to README.Debian about the now gone MDA fallback
+  * Edit manpages to make sure the MDA fallback myth doesn't come back,
+    either
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue,  5 Mar 2002 15:23:37 -0300
+
+fetchmail (5.9.8-3) unstable; urgency=low
+
+  * Really fix #126221 this time, I hope.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 17 Feb 2002 07:50:53 -0300
+
+fetchmail (5.9.8-2) unstable; urgency=low
+
+  * Remove fetchmail-up and fetchmail-down scripts. There is no reason
+    at all not to call /etc/init.d/fetchmail for the ppp up and down
+    functions. (closes: #134190)
+  * Add sample /usr/share/doc/fetchmail{-ssl,}/ip-down example script
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 16 Feb 2002 07:28:43 -0200
+
+fetchmail (5.9.8-1) unstable; urgency=medium
+
+  * New upstream source:
+    + Document interaction of expunge in POP3 and servers which require a
+      delay before reconnection (closes: #132769)
+    + vsprintf underflow fixes by Sunil Shetye.
+    + Added warning about UIMS POP3 server.
+    + Sunil Shetye's patch for idle timeout during poll.
+  * Update copyright file (closes: #133497)
+  * Re-create /var/run/fetchmail on init.d script (closes: #133577)
+  * A recent upload disabled fingerprint output when running in silent
+    mode (closes: #126221)
+  * Use a safer (but far more likely to leave cruft behind) method of
+    removing the fetchmail user during purge.  Users that request fetchmail to
+    be purged will not lose anything they left behind in /var/run/fetchmail,
+    even if they DID tell dpkg to purge all fetchmail traces from the system.
+    Don't expect such level of babysitting very often (closes: #130779)
+  * Fix fuckage on new i18n templates, and update da.po while at it
+  * fetchmail, fetchmail-ssl: call db_purge on install and upgrades, to
+    let debconf know that all templates were moved to fetchmail-common.
+    Otherwise, they are not removed from the system on purge
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 16 Feb 2002 00:50:24 -0200
+
+fetchmail (5.9.7-3) unstable; urgency=low
+
+  * Disable /usr/sbin/sendmail fallback (closes: #133340)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 11 Feb 2002 11:35:29 -0200
+
+fetchmail (5.9.7-2) unstable; urgency=low
+
+  * Do not supress the read of the message body when transact.c(readheaders)
+    returns PS_TRUNCATED (closes: #128672)
+  * Fix longstanding SSL hang w/ 100% CPU usage bug, thanks to
+    Matthias Andree <ma@dt.e-technik.uni-dortmund.de> for tracking down and
+    fixing the bug (closes: #127041)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 10 Feb 2002 12:22:39 -0200
+
+fetchmail (5.9.7-1) unstable; urgency=low
+
+  * New upstream source:
+    + Properly guard some transaction reporting in the SSL code
+    + Expunge edge case fix by Sunil Shetye
+    + Fixes for some odd IMAP and SMTP edge cases by Sunil Shetye
+    + UIDL bug fix by Matthias Andree
+    + Use smtpaddress, if present, to set the return path on warning mail
+    + Tell parser to object when SSL keyboard is used with SSL not compiled
+    + GSSAPI and ODMR fixes by Tom Hughes
+  * Fix small typo in message output (initscript) (closes: #129270)
+  * Change references to packaging-manual to debian-policy in comments
+  * Applied Tom Hughes patches to fix build of gssapi.c
+  * Enable i18n for "de" locale
+  * Do not output error when user requests "NO SSL" in the no-ssl version
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  2 Feb 2002 20:29:35 -0200
+
+fetchmail (5.9.6-2) unstable; urgency=medium
+
+  * Fix minor upgrade glitch: now remove /usr/share/doc/fethmail{-ssl,}
+    in new fetchmail{-ssl,} preinst script (closes: #126155)
+  * Tweak descriptions of fetchmail-common, fetchmail and fetchmail-ssl
+    to mention each other (closes: #126345)
+  * Fix non-initialization of deletions(imap.c), which resulted in random
+    crashes. Thanks to Sunil Shetye <shetye@bombay.retortsoft.com> for
+    tracking down the issue and for a preliminary version of the patch.
+  * Add umask 022 and some chmod --reference to postinst, so that we create
+    /etc/default/fetchmail with mode 644 and avoid changing its permissions
+    later.  I will not attempt to chmod 644 it, since the user might have a
+    good reason to want it mode 600, so old files will remain 600 until the
+    user notices and chmods it himself if he wants to (closes: #126655)
+  * Add Danish debconf templates, thanks Claus Hindsgaul
+    (closes: #126595, #126596)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 29 Dec 2001 17:08:51 -0200
+
+fetchmail (5.9.6-1) unstable; urgency=medium
+
+  * The "Twilight in the North Sea" release
+  * New upstream source:
+     + OPIE bug fixes by Jun Miyoshi <usako@omnisci.co.jp>.
+     + Documented known IDLE bug in the todo.html file.
+     + Sunil Shetye's fix for a timeout/reconnect bug.
+     + LMTP fix from Toshiro HIKITA <toshi@sodan.org>.
+     + The duplicate-killer doesn't try to operate if we can get an actual
+        recipient address from the trace headers.
+  * Fix usage of dpkg-architecture in debian/rules: do not append -gnu to
+    the result, dpkg-architecture might be fixed to actually work as it
+    should someday, after all...
+  * Create a fetchmail-common package, to fix once and for all the problems
+    resulting from the sharing of conffiles between fetchmail and
+    fetchmail-ssl (closes: #123056)
+  * fetchmail-up: return exit status 0 if $DAEMON is not there to be run
+  * ip-up: return exit status 0 if initscript is not there to be run
+  * Document well in README.Debian just how dumb it is to forget to test-run
+    fetchmail with the 'keep' option when one changes the MTA/MDA
+    configuration, or fetchmail's. Also document the less-likely-to-delete-
+    messages way: setting antispam to -1 and setting "no bouncemail".
+    Upstream does not want to change the antispam defaults, and I happen to
+    think this is his call. OTOH, I will add an example config with safe
+    options, and if clueless people use that one, they will be [mostly] safe
+    from harm (closes: #123759)
+  * Report errors while opening logfile (closes: #120526)
+  * Change initscript slightly to show 'fetchmail' before trying to start
+    or signal it (closes: #121939)
+  * lintian override: "E: fetchmail-ssl usr-doc-symlink-to-foreign-package":
+    fetchmail-ssl DOES come from exactly the same source of fetchmail-common,
+    due to the ssl transformation hack.  This hack will be shortlived. As soon
+    as woody is out or crypto in main arrives, I am killing the non-crypto
+    version of fetchmail.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 16 Dec 2001 11:04:12 -0200
+
+fetchmail (5.9.5-7) unstable; urgency=low
+
+  * Braindamaged sudo usage hits again. I am done with this, screw $HOME --
+    sudo users make this useless and still expect stuff to work. Now use
+    getent passwd instead of assuming $HOME has anything useful at all in
+    these checks (closes: #122716).  Yet another 'tip' for the currently
+    in limbo "debian packaging manual/howto/whatever".
+  * Apply patches from Mikael Andersson <mikan@debian.org> to fix build
+    with Debian kerberos4th. You better be using a new kerberos4th (>= 1.1),
+    or else this will break your build
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  8 Dec 2001 03:50:21 -0200
+
+fetchmail (5.9.5-6) unstable; urgency=high
+
+  * Fix logcheck.ignore file to really close #120398
+  * Kicked urgency to high to get this thing into testing ASAP
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 28 Nov 2001 13:21:53 -0200
+
+fetchmail (5.9.5-5) unstable; urgency=low
+
+  * Complile all archs using -O instead of -O2, since upstream
+    also does it, and -O2 is broken in sparc (closes: #119425)
+  * Force correct permissions before trying to read config file
+    (closes: #120932)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 24 Nov 2001 14:34:28 -0200
+
+fetchmail (5.9.5-4) unstable; urgency=low
+
+  * Yet another workaround against #119366, make sure the owner of
+    /var/run/fetchmail is fetchmail:nogroup (closes: #120519)
+  * Add the chown workaround to the init script too, just in case
+  * Added "key fingerprint" and "#### body octets" to logcheck.ignore
+    (closes: #120398)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 22 Nov 2001 00:29:04 -0200
+
+fetchmail (5.9.5-3) unstable; urgency=low
+
+  * Added fetchmail\[[0-9]+\]: sleeping to logcheck.ignore (closes: #119682)
+  * Changed verbosity of "sleeping at ..." log message so that it only
+    shows up if fetchmail is above normal log level (closes: #120078)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 18 Nov 2001 11:55:07 -0200
+
+fetchmail (5.9.5-2) unstable; urgency=low
+
+  * Remove uneeded conflicts with python >=2.2. Lintian was screwing up.
+  * Add workaround for #119366, adduser not ensuring that the homedir
+    of the fetchmail user is really there
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 12 Nov 2001 22:10:38 -0200
+
+fetchmail (5.9.5-1) unstable; urgency=low
+
+  * The "Very dark skies ahead" release
+  * Enjoy NLS while it lasts. Upstream may drop it in the close future,
+    and I am not sure I will keep it alive in a Debian fork (I will certainly
+    try, however)
+  * New upstream source:
+    + Finished license cleanup, all licenses in the distribution are now
+      officially GPL-compatible.
+    + Added a length check to from64tobits() after receiving a warning that
+      it might create buffer overflows.  No exploitable overflows were found
+      by a careful case-by-case audit, and at minimum an exploit would have
+      required that the mailserver be subverted
+    + Changed the logging logic along lines suggested by Jan Klaverstijn
+    + fetchmailconf looks first in the directory it's running from to find
+      fetchmail
+    + Make sure we vet a success status correctly from open_smtp_sink()
+      and open_bsmtp_sink()
+    + Immediately abort if a non-empty QMAILINJECT environment variable is
+      found. If it is set and contains f or i, qmail-inject or qmail's
+      sendmail `compatibility' wrapper will rewrite From: or Message-ID:
+      headers, respectively. En passant, fix the bug that program_name was not
+      filled in before used when the user's ID had no PW entry, leading to
+      (null) or crash when printing the error message. Patch by Matthias
+      Andree
+    + Block signals during SockConnect() so we don't get a socket descriptor
+      leak if we're hit by an alarm signal during connect(2)
+    + Set queryname even when server is inactive; avoids a core-dump bug in
+      the fetchids code
+  * Add -tt option to strace in the init.d debug-run debug helper
+  * Fix all calls to from64tobits so that fetchmail will actually compile,
+    I have no idea how it is compiling upstream without this. Maybe my CVS
+    tree is weird... oh well, I am using the non-exploitable version, so
+    I could care less :P
+  * Do not run config.guess anymore, trust output of dpkg-architecture
+  * Update fetchmailconf dependency list for the python 2.1 changes
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 10 Nov 2001 11:32:14 -0200
+
+fetchmail (5.9.3-1) unstable; urgency=low
+
+  * The "Upstream blues" release(s) :P
+  * New upstream source
+    + Make -D short option for --smtpaddress active again
+    + Make sure IMAP capability checks are caseblind
+    + Make sure suffix checks on akalists are properly caseblinded
+    + All warning mail now has a generated date stamp
+    + End of poll cycle is now logged
+    + Sanity check now rejects SSL option if SSL support is not
+      compiled in (Closes: #109796)
+    + Mike Warfield's fix for using a combined SSL cert and key in a
+      single file
+    + DNS lookups moved to just before te mailserver socket open, so
+      fetchmail now works OK even if started up without Internet
+      access. HESIOD lookups moved just before the DNS lookups
+    + Make sure the SICHLD handler is called when we run detached
+      (this helps with the zombie issue in #95659, I hope)
+    + Added FAQ item X8 on why mail sometimes gets an extra )
+      appended
+    + Thomas Moestl's patch to use querynames in UID files.
+    + Timeout to deal with long socket closes (Sunil Shetye).
+    + Move from RSA MD5 code to Colin Plumb's public-domain implementation
+      (BSD classic license eliminated)
+    + Rewrite strcasecmp() (BSD classic license eliminated).
+    + Updated Danish po file.
+    + Re-enable explicit bounce message on bad address.
+  * Make sure .pot files are up-to-date. Will fix this for real in the
+    next upstream version, after I know how ESR will fix this upstream,
+    and what will come inside the upstream tarball
+  * fetchmailconf: fix tuple in sock.connect for python 2.1. Thanks to
+    Alain TÃ©sio <alain@onesite.org> for the patch
+  * fetchmailconf: disable gross hack from upstream. We do NOT want
+    fetchmailconf to look for fetchmail in the current dir before it
+    searches $PATH. I shudder at the bug reports from clueless users...
+  * Fix problematic changes in 5.9.1-3 that caused POP2 protocol to be
+    run without being requested
+  * Make sure xgettext knows fetchmail uses GT_() instead of _() for gettext
+    (someone in fetchmail-friends pointed the need to do this, but I lost
+    his name somehow. Thank you, whomever you are). This actualy exposed
+    a bug in gettextize
+  * Update documentation on the _() to GT_() transition (sent upstream)
+  * Version dependency on debconf due to seen flag
+  * Fix typo in debian/copyright. Lintian rules!
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 30 Sep 2001 21:47:41 -0300
+
+fetchmail (5.9.0-5) unstable; urgency=low
+
+  * The "tidy-up before a long winter" release
+  * Fix ugly bogosity in fetchmail-up script, thanks to  Jacek Kawa
+    <jfk@zeus.polsl.gliwice.pl> for the patch. I wonder what I was (not?)
+    thinking when I broke fetchmail-up...
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 20 Sep 2001 08:47:54 -0300
+
+fetchmail (5.9.0-4) unstable; urgency=medium
+
+  * Fix extremely stupid typo in fetchmail.config (closes: #112142)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 13 Sep 2001 15:12:37 -0300
+
+fetchmail (5.9.0-3) unstable; urgency=low
+
+  * Do not warn about the overriding of initscript defaults if system-wide
+    fetchmail is not active (closes: #110396)
+  * Change /bin/mail to /usr/bin/mail in fetchmail(1) (closes: #110820)
+  * fetchmailconf does not output empty plugin/plugout strings anymore
+    (closes: #106668, #106686).
+  * fetchmail: do strip /port# from LMTP addresses (closes: #98388)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun,  2 Sep 2001 11:57:56 -0300
+
+fetchmail (5.9.0-2) unstable; urgency=low
+
+  * Added strace capability to /etc/init.d/fetchmail debug-run, and updated
+    docs accordingly
+  * Detect missing /var/run or /var/run/fetchmail directory in initscript
+    (closes: #110076)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 26 Aug 2001 08:11:34 -0300
+
+fetchmail (5.9.0-1) unstable; urgency=low
+
+  * New upstream source:
+    * # characters now go to stdout, same place as the dots
+    * Matthias Andree's patch to correct parsing of spaces in quoted
+      usernames
+  * Do not complain/bomb out with an error if /etc/init.d/fetchmail is
+    missing, unless system-wide fetchmail is being switched from
+    disabled to enabled.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 15 Aug 2001 15:35:17 -0300
+
+fetchmail (5.8.17-1) unstable; urgency=low
+
+  * New upstream source:
+    * Eliminated second bounce on failed RCPT TO address.
+    * Always use fetchmail host's FQDN to identify the daemon when sending
+      bounce messages.
+    * Embarrassing bug of the month -- somehow, `skip' wasn't being
+      interpreted!
+  * Upstream integrated the security fix added to Debian in 5.8.16-1,
+    however I've added a warning should anyone attempt that exploit.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed,  8 Aug 2001 09:08:54 -0300
+
+fetchmail (5.8.16-1) unstable; urgency=high
+
+  * New upstream source:
+    * Refuse mail that has no good addresses and can't be sent to postmaster
+    * Restore behavior of discarding mail on 550 (closes: #105237)
+    * John Summerfield updated getfetchmail
+    * Lock-file-name bug reported by Scott Johnson
+    * Man page bugs pointed out by Andrew Benham
+    * POP3 end of session RSET on keep removed. Fixed in Debian in 5.8.14-1
+      (closes: #104125)
+    * In IMAP, handle BAD and NO responses to FETCH gracefully
+    * Parse "no {syslog|invisible|showdots} properly
+    * Fixed bug in fetchmailconf plugin/plugout code (related to #105987)
+    * Handle ! in RFC2821 Return-Path addresses properly
+  * Fix typo in fetchmail(1), also done upstream (closes: #106925)
+  * SECURITY FIX: fix remote exploit on pop3 and imap protocols; Thanks
+    to Salvatore Sanfilippo <antirez@invece.org> for reporting the bug
+    and suggesting a patch to fix it.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 14 Jul 2001 12:38:26 -0300
+
+fetchmail (5.8.14-2) unstable; urgency=low
+
+  * Improved README.Debian file a little.  Documented the fact that
+    system-wide fetchmail will refuse to start if there are errors in the
+    /etc/fetchmailrc file (closes: #105363).  Documented how to properly
+    report bugs
+  * Added a debug-run initscript action that outputs proper debugging
+    information for reporting bugs
+  * Fix duplicate autotools-dev stuff in debian/rules clean target
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 14 Jul 2001 12:38:26 -0300
+
+fetchmail (5.8.14-1) unstable; urgency=medium
+
+  * New upstream source:
+    * Correction for backslash-handling patch in rfc822.c
+    * Fix for Debian Bug#103822: fetchmailconf fails to write file after
+      configuration; move .fetchmailrc to .fetchmailrc~ before overwriting
+      (closes: #103822)
+    * Discard Return-Path headers consisting of a single @
+    * Make fetchmailconf dump plugin and plugout options properly
+    * Rob Brauns changes for building fetchmail outside its source directory
+    * Found (and killed) a subtle SMTP protocol error that was probably
+      lurking behind a lot of the bug reports related to bounce mail, thanks
+      to Quoc Luu. (Only manifested when the MTA rejected mail due to a bad
+      RCPT TO address) -- I think this closes: #88764 (hmh)
+  * Disable RSET before QUIT for pop3. This is a temporary measure, and I
+    might put it back soon (#104125)
+  * Fix serious configure.in bug that broke fallbacks to /usr/sbin/sendmail
+    (#104484)
+  * Fix assorted -Wall and build problems on upstream code
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 14 Jul 2001 12:38:26 -0300
+
+fetchmail (5.8.12-1) unstable; urgency=low
+
+  * New upstream source:
+    + Bug fix for envelope header skip
+    + ODMR finally seems to be working
+    + Handle multiple backslashes within RFC822 address strings correctly.
+    + Don't exit on a failure to DNS-resolve a mailserver name, just
+      make it inactive.  Exit only if all lookups fail  (closes: #99197)
+    + Restore code to deal with SMTP error responses at RCPT TO time, but
+      without issuing an RSET.  This is intended to fix obscure bugs that
+      show up in recent Postfix releases and sendmail configurations that
+      delay antispam checks on the MAIL FROM line until RCPT TO time
+      (maybe fixes #88764)
+  * Add better autotools-dev support to debian/rules. Add devscripts to
+    build-depends because of this change
+  * Close standard input on initscript to make sure fetchmail won't ask
+    for passwords
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  7 Jul 2001 23:33:24 -0300
+
+fetchmail (5.8.11-1) unstable; urgency=low
+
+  * New upstream source:
+    + Add more ODMR fixes from Matt Armstrong <matt@lickey.com>
+    + Fix signal handling code (closes: #102711). Now, we do not reap
+      dead children until the end of a run when delivering to a MDA.
+      IF you use plugins and deliver to a MDA, you risk being overrun
+      by an army of undead. Don't do it, deliver through SMTP instead
+    + If a mail will be bounced to the postmaster AND postmaster is set to ""
+      (empty), don't try to forward it.  Patch from Sunil Shetye
+      <shetye@bombay.retortsoft.com>
+  * Add polish template, thanks to Krzysztof Krzyzaniak
+    <eloy@transilvania.eu.org> (closes: #102667)
+  * More code cleanups for -Wall
+  * Recent bugfixes to other problems also fixed these:
+    (closes: #95370, #101950)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue,  3 Jul 2001 11:59:34 -0300
+
+fetchmail (5.8.10-2) unstable; urgency=low
+
+  * Recompile with dpkg 1.9.10 (closes: #102524, #102593)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 27 Jun 2001 13:42:34 -0300
+
+fetchmail (5.8.10-1) unstable; urgency=low
+
+  * New upstream source:
+    + ODMR fixes from Matt Armstrong <matt@lickey.com>
+    + The smtphost option has been split.  It is no longer overloaded to set
+      the list of domains to be queried in ETRN and ODMR modes.  Instead,
+      use the `fetchdomains' option.
+    + Fixes for the new message-marking code from Thomas Moestl
+  * Fix incorrect usage of strncat in 5.8.8-2 patch (also done upstream)
+  * Normalize tab usage on fetchmailconf (to keep #102052 closed)
+  * Fixed some -Wall warnings
+  * Added menu icon for fetchmailconf
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 26 Jun 2001 00:25:56 -0300
+
+fetchmail (5.8.8-3) unstable; urgency=low
+
+  * Finally managed to track down and terminate the last remaining
+    necromantic bug that liked keeping zombie children around for nefarious
+    needs (closes: #95659)
+  * Normalize tab usage on fetchmailconf (closes: #102052)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 24 Jun 2001 00:27:11 -0300
+
+fetchmail (5.8.8-2) unstable; urgency=low
+
+  * Fix warning about syslog/daemon overrides; now assume the warning should
+    be given at least once, if it cannot be verified to be uneeded.
+  * Replace numerous sprintfs with snprintf to avoid some remote
+    possibilities of a formatstring exploit exist. Same for strcat.
+  * Cleaned up lots of warnings (most of them justified) from gcc
+  * Debug builds now disable optimizations
+  * Dirty fix for ok in (driver.c)fetch_messages getting out of scope
+    for do_session (closes: #101792)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 23 Jun 2001 02:37:30 -0300
+
+fetchmail (5.8.8-1) unstable; urgency=low
+
+  * New upstream source
+    + Fix bug that prevented messages from being marked oversized
+      unless -v was on
+    + Steven Krings's patch to deal with over-long header lines
+    + Chris Maio's patch for POP3 with BSMTP
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 21 Jun 2001 11:51:18 -0300
+
+fetchmail (5.8.7-2) unstable; urgency=low
+
+  * fetchmailconf: Enclose local user names in quotes to avoid parse error
+    if numeric (closes: #101500)
+  * Add recently added .c files to po/POTFILES.in. Thanks to Byrial Jensen
+    <byrial@image.dk> for the patch
+  * Fix multidrop problem caused by the security fix in 5.8.5-2.  Thanks to
+    Steve M.Robbins <steven.robbins@videotron.ca> for tracking this bug
+    down, and supplying a patch. Don't I feel dumb now for this mistake...
+    No more coding security fixes at 03:00 in the morning for me
+    (closes: #101530)
+  * Fix undue parameter expansion when generating postinst from template
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 19 Jun 2001 23:08:59 -0300
+
+fetchmail (5.8.7-1) unstable; urgency=low
+
+  * This release marks the start of a major code rewrite in fetchmail, so I
+    expect things to break. It doesn't help that I had to do a very
+    extensive list of changes in the packaging for 5.8.6-3. This is
+    unstable, therefore I'm not too concerned. However, you might want to
+    stick to 5.8.6-2 and wait for a few days to see if any major bugs show
+    up in the BTS before upgrading. You have been warned.
+  * New upstream source
+    + Fix fetchmailconf support for tracepolls (closes: #101242)
+    + driver.c refactoring in preparation for streaming mode
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 18 Jun 2001 11:26:41 -0300
+
+fetchmail (5.8.6-3) unstable; urgency=medium
+
+  * Applied patch from Byrial Jensen <byrial@image.dk> to make the
+    tracepools RFC-2822 compliant. Also, fixed bogus reference to
+    --adaccthdr in fetchmail --help
+  * Generate the postinst script in debian/rules from init.defaults and
+    *.postinst.template, to avoid poluting /usr/share or sync loss between
+    postinst and init.defaults
+  * Fix segfault-waiting-to-happen in driver.c. Thanks to Stephan Krings
+    <stephan@xmn-berlin.de> for noticing it
+  * /etc/default/fetchmail is not a conffile anymore. User-made changes are
+    still supported, but any changes made by me will not be propagated
+    anymore on upgrades. The "up-to-date" version of the configuration file
+    (including defaults and comments) is in the examples directory in the
+    documentation (closes: #101025)
+  * Disable fetchmailconf support for tracepolls until bug#101242 gets
+    fixed upstream
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 18 Jun 2001 02:50:34 -0300
+
+fetchmail (5.8.6-2) unstable; urgency=low
+
+  * Clean-up upstream cruft automatically, to make sure it won't choke an
+    --with-included-gettext build (not normally used in Debian, but who
+    knows...). This is needed because diff cannot delete files
+  * Running fetchmail as root is dangerous. The safest way is to run it as a
+    very unpriviledged user (you could even chroot it, I suppose) and
+    deliver over smtp. Stress this on the documentation
+  * Fix initscript so that it will work with POSIXLY_CORRECT set, thanks
+    "Sven M. Hallberg" <pesco@gmx.de>
+  * Do not abort postinst/prerm if the initscript fails (closes: #100832)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 14 Jun 2001 11:12:53 -0300
+
+fetchmail (5.8.6-1) unstable; urgency=low
+
+  * New upstream source
+    - Reject candidate headers for the MAIL FROM address that have \n in
+      them
+    - Add capability to insert poll trace data in the Received line
+    - Brendan Kehoe's patch to avoid doing DNS lookups on skip entries
+      (helps with #99197, but doesn't fix the whole issue)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 12 Jun 2001 13:28:19 -0300
+
+fetchmail (5.8.5-2) unstable; urgency=high
+
+  * Security fix: buffer overflow when rewriting headers longer than 512
+    bytes (closes : #100394)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 12 Jun 2001 02:34:50 -0300
+
+fetchmail (5.8.5-1) unstable; urgency=low
+
+  * New upstream version
+    + Interface option fix from Alexander Kourakov.
+    + Attempted fix for Harry McGavran's problems with the Kerberos V build.
+    + Added fetchmailnochda.pl to the contrib directory.
+    + Sunil Shetye's patches for the seen count on IMAP and auto protocol.
+  * Fixed typo in logcheck.ignore (closes: #99706)
+  * Removed top_srcdir="." directive in debian/rules, as it broke the build
+    with new gettext and autoconf
+  * At least two known (and bad) bugs waiting for upstream fix. See
+    TODO.Debian in the source package -- they're not new bugs, AFAIK.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  2 Jun 2001 12:49:23 -0300
+
+fetchmail (5.8.4-1) unstable; urgency=low
+
+  * New upstream version
+    + New README.SSL file. If you use SSL, read it; tied to:
+    + New SSL certificate options from Thomas Moestl <tmoestl@gmx.net>
+    + Frantisek Brabec's patch for better UIDL error recovery
+    + Jorg de Jong's patch attempts to handle spaces in the ID part of UIDLs
+      (this probably closes: #96489)
+  * Fixed small typo in manpage
+  * Very minor fixes to work with autoconf 2.50
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 22 May 2001 22:42:13 -0300
+
+fetchmail (5.8.3-2) unstable; urgency=medium
+
+  * The "Zombie-Child Reaper" release
+  * Split changelogs (including upstream's), to remove old cruft.
+    No information was lost, the complete changelogs are available
+    in the source package
+  * Serious attempt to allow all dead children to go peacefully to
+    the Big Bitbucket In The Sky. Signal handling was really screwed
+    up in Linux glibc 2.2 systems (and maybe others) (closes: #95659)
+  * fetchmailconf would generate bogus output if the monitor or
+    netsec options where enabled (closes: #98127)
+  * Use autotools-dev to make sure we need not worry about
+    config.{sub,guess} again.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 21 May 2001 11:42:13 -0300
+
+fetchmail (5.8.3-1) unstable; urgency=medium
+
+  * The "major pain in the neck" release
+  * New upstream release
+    - Don't cough and die from failure to resolve a skipped host
+      (closes: #92530, #92554)
+    - SIGCHLD handler now sets SA_RESTART explicitly in order to avoid
+      zombies from interrupted system calls (closes: #95993)
+    - Do aka suffix match even if DNS checking is enabled
+    - Prevent POP3 code from authenticating multiple times on success
+    - Fixed IMAP password shrouding
+    - Ignore Sender and Resent-Sender headers unless they contain @
+    + The `localhost' special case of `via' is gone. Use `plugin %h' for
+      talking to ssh instead. THIS IS AN INCOMPATIBLE CHANGE IN
+      .fetchmailrc SEMANTICS. If you are using this for ssh tunnelling,
+      you may need to switch to using a plugin option with %h
+      SEE THE FAQ and fetchmail(1) manpage.
+  * Also set SA_NOCLDSTOP on SIGCHLD handler, we'll timeout the child
+  * Update German template, thanks blade@debian.org (closes: #97155)
+  * Add Galician template, thanks Jacobo Tarrio <jtarrio@trasno.net>
+  * Fixed build-dependency: libssl096-dev -> libssl-dev
+  * Honour /etc/default/fetchmail's CONFFILE in debconf warning tests
+  * Trust base-files to manage /var/mail, update policy compliance to
+    3.5.4 and add the proper depends on base-files >= 2.2.0. This
+    reduces the mess on many of the scripts, which is a Good Thing.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 13 May 2001 14:35:58 -0300
+
+fetchmail (5.8.1-6) unstable; urgency=low
+
+  * The "I should not have got out of bed yesterday" release
+  * Fix broken handling of debconf defaults in fetchmail.config
+    (closes: #96648)
+  * Fix handling of /etc/default/fetchmail for $SERVICE when first
+    adding SERVICE to the config file
+  * Fix annoying postinst bogosity when creating the fetchmail user
+  * Add user-is-really-there test to initscript to close a bogon source
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon,  7 May 2001 16:53:08 -0300
+
+fetchmail (5.8.1-5) unstable; urgency=low
+
+  * The "I told you, didn't I?" release
+  * Warn users that ssh needs to be able to read the RSA/DSA keys to work,
+    and that means they must run the system-wide fetchmail as root.
+  * Debconf "no system-wide fetchmail" master switch added. Use
+    dpkg-reconfigure to re-enable it, or cry silently at the resulting
+    breakage if you don't know what you're doing.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  5 May 2001 23:58:05 -0300
+
+fetchmail (5.8.1-4) unstable; urgency=low
+
+  * The "A Debian developer's way is fraught with peril" release
+  * New Dutch template, thanks Thomas J. Zeeman (closes: #95737)
+  * Add debconf and initscript support to run the system-wide fetchmail
+    daemon as user fetchmail.  It is safer, but it won't work if
+    fetchmail is told to deliver to a MDA.  Unfortunately, now the
+    initscript violates the KISS principle quite throughoutly.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  5 May 2001 01:57:50 -0300
+
+fetchmail (5.8.1-3) unstable; urgency=low
+
+  * Small fixes to Makefile.in to finally have proper builds with all
+    possible gettext profiles (none, included, system's).
+  * New german template translations, thanks Sebastian Feltel (closes: #94529)
+  * Fix typo in templates.br (pt-br -> pt_BR)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 19 Apr 2001 15:32:15 -0300
+
+fetchmail (5.8.1-2) unstable; urgency=medium
+
+  * Fix upload screwup. No changes
+  * Use MULTIDROP(foo) in #92544 fix patch
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 12 Apr 2001 00:41:09 -0300
+
+fetchmail (5.8.1-1) unstable; urgency=medium
+
+  * The "it's time for the spring cleanup" release
+  * New upstream source
+    - Nalin Dahyabai's password parsing and authentication fixes.
+    - Golden brand (5.8.0)
+  * New upstream gettext 0.10.36 used instead of fetchmail upstream's.  From
+    now on, Debian builds will always include the newest Debian packaged
+    version of gettext in the package source, just in case (we do not use
+    it, though)
+  * Build tweaks: to make sure new gettext will work, debian/rules clean now
+    adds execute permissions to all files that should have them, instead of
+    trusting the upstream tarball
+  * Switch to debhelper DH_COMPAT mode 3
+  * Kerberos build support in fetchmail is NOT sane. I don't have a very
+    good way to test this stuff (and I don't think upstream can, either...),
+    but I'll try to at least clean it up to the point of it building
+    out-of-the-box using the multiple kerberos packages available in Debian.
+    This probably closes: #92793.
+    - configure changes to properly detect and work with heimdal-dev,
+      kerberos4kth-dev and krb5-dev. Do notice heimdal-dev does not provide
+      kerberosIV compatibility in Debian, you need kerberos4kth-dev too if
+      you need it (configure.in). Also, Heimdal builds *require* OpenSSL
+      support (due to Debian's packaging of Heimdal).
+    - rfc1731 seems to require kerberosIV support as far as I can tell from
+      RFCs, and the imap.c code agrees with this. This means that now KPOP
+      is only available if kerberosIV is as well. Do remember that GSSAPI
+      does not require kerberosIV and will work in kerberosV-only setups
+      (pop3.c)
+  * Fix typo in logcheck.ignore file (closes: #93215)
+  * Initscript fixed to not lie about fetchmail already running when it
+    fails to start (e.g. due to bad DNS) (closes: #93316)
+  * Do not use the poll name when using "via localhost" unless it is
+    a multidrop poll. (partialy addresses #92554)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 11 Apr 2001 12:09:35 -0300
+
+fetchmail (5.7.7-2) unstable; urgency=low
+
+  * Fix postrm purge target (closes: #92361)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun,  1 Apr 2001 01:43:41 -0300
+
+fetchmail (5.7.7-1) unstable; urgency=low
+
+  * New upstream source (but not really)
+    - No changes from 5.7.6-3 in Debian
+  * Build tweaks: now debian/rules makes sure the autotools are never run
+    so they have been dropped from build-depends.
+  * "--user root" was lost somehow from the initscript, probably in
+    one of those late-night hack-the-initscript sessions. Add it
+    back (closes: #92124)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 30 Mar 2001 00:45:57 -0300
+
+fetchmail (5.7.6-3) unstable; urgency=low
+
+  * The "GNU autotools are a pain in the arse" release
+  * I'm now using a full CVS-style autogen.sh approach. This will
+    make fetchmail far more friendly to newly debian-supported archs,
+    such as ia64 and hppa which need up-to-date config.guess or config.sub
+    support. I just hope nothing got broken in the process...
+  * Added menu entry for fetchmailconf
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 28 Mar 2001 01:36:40 -0300
+
+fetchmail (5.7.6-2) unstable; urgency=low
+
+  * Fix broken support for build without autoconf/autoheader
+  * Added CVS version info to many debian/ files
+  * Remind user that /etc/fetchmailrc is not removed on package
+    purge (we don't provide it, after all...)
+  * Fix bug in sink.c that would cause some SMTP errors not to be
+    correctly echoed to the log (e.g. 452 Out of storage)
+    (closes: #90966)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 25 Mar 2001 11:28:48 -0300
+
+fetchmail (5.7.6-1) unstable; urgency=low
+
+  * New upstream source
+    - IMAP: don't just quit if GSSAPI or Kerberos IV fail, but
+      try other methods
+    - Document the fact the IDLE and multiple folders don't play
+      well together (closes: #89908)
+  * Use -pipe for gcc in debian/rules
+  * Remove a lot of useless or dangerous cruft from contrib/
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 22 Mar 2001 21:22:27 -0300
+
+fetchmail (5.7.5-2) unstable; urgency=high
+
+  * Fix POP2 build breackage
+  * Fix POP3 password leakage in fetchmail -v (closes: #90176)
+  * Try to compensate for broken sudo setups not correctly
+    setting ${HOME} for root, without actually breaking it for
+    people that have root's homedir elsewhere than /root
+    (closes: #90180)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 18 Mar 2001 23:40:58 -0300
+
+fetchmail (5.7.5-1) unstable; urgency=low
+
+  * New upstream source
+  * Add IPV6 and IPV6SEC build-time options to debian/rules
+  * Document in rcfile_y.y that "interface" is not available in
+    ipv6 builds
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 15 Mar 2001 19:30:23 -0300
+
+fetchmail (5.7.4-3) unstable; urgency=low
+
+  * Build-depends only in mail-transport-agent, as autobuilders do not
+    use the OR dependency.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 14 Mar 2001 14:57:55 -0300
+
+fetchmail (5.7.4-2) unstable; urgency=low
+
+  * Fixed build-depends (for fallback MDA)
+  * Suggests: mail-transport-agent
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 12 Mar 2001 21:57:18 -0300
+
+fetchmail (5.7.4-1) unstable; urgency=low
+
+  * New upstream source
+    - fetchmail now has a fallback MDA strategy for when it cannot connect
+      to the SMTP sink. Since not everyone will want to install and configure
+      procmail just because of fetchmail, we use /usr/sbin/sendmail as the
+      fallback strategy (works with exim, sendmail and postfix. Other MTAs
+      not tested)
+  * Patched to allow user to choose fallback strategy
+  * New conffile for initscript, /etc/default/fetchmail.  This allows for
+    a default --daemon and --syslog behaviour, but will get in the way of
+    the clueful people who did the right thing and used set daemon and
+    set syslog in /etc/fetchmailrc (closes: #89343)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 11 Mar 2001 20:26:56 -0300
+
+fetchmail (5.7.2-4) unstable; urgency=low
+
+  * Added support for systems where aclocal and autoconf are not available
+    (which actually mean autoconf and automake can be removed from the
+    build-depends, but I'd rather have them installed when building
+    fetchmail)
+  * Better changelog for fetchmail-ssl
+  * Fix unsafe tempfile handling in fetchmailconf (closes: #89238)
+    Thanks go to Colin Phipps for the patch
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 11 Mar 2001 13:02:15 -0300
+
+fetchmail (5.7.2-3) unstable; urgency=low
+
+  * Fix bug in IMAP mailbox check (triggered by --check)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed,  7 Mar 2001 15:10:00 -0300
+
+fetchmail (5.7.2-2) unstable; urgency=low
+
+  * Fix IPv6 SA_LEN patch
+  * GSSAPI wouldn't compile due to syntax errors
+  * PROG_MAKE_SET was missing in configure.in
+  * Installs logcheck ignore files for the "C" locale
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed,  7 Mar 2001 00:03:48 -0300
+
+fetchmail (5.7.2-1) unstable; urgency=low
+
+  * New upstream source
+  * Fixed SA_LEN for glibc 2.2.2 and IPv6
+  * Rebuilt NLS support (configure, makefiles) from scratch. Many thanks to
+    NicolÃ¡s Lichtmaier, who helped me a lot to figure out what was broken,
+    and why
+  * Warn user to move /root/.fetchids to new location (closes: #88658)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon,  5 Mar 2001 09:05:39 -0300
+
+fetchmail (5.7.1-2) unstable; urgency=low
+
+  * Seamless *build-time* support for kerberos IV and V, as well as for many
+    optional configure targets for fetchmail. This allows easy building of custom
+    fetchmail packages, supporting, e.g. POP2 or GSSAPI. See README.Debian and
+    debian/rules files for more information. (closes: #33317)
+  * Fix fetchmailconf "nospambounce" bug
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun,  4 Mar 2001 13:09:46 -0300
+
+fetchmail (5.7.1-1) unstable; urgency=low
+
+  * New upstream source
+    - manpage updates
+    - new --sslproto option
+  * Patched to fix NLS build
+  * Patched to fix SSL build
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun,  4 Mar 2001 05:43:50 -0300
+
+fetchmail (5.7.0-2) unstable; urgency=low
+
+  * Patch from upstream: do not attempt SASL on KPOP servers,
+    instead send USER and a fake PASS (closes: #88288)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  3 Mar 2001 19:19:54 -0300
+
+fetchmail (5.7.0-1) unstable; urgency=low
+
+  * New upstream source, fixes issues with fetchmailconf
+  * Patched to avoid breakage in NLS support
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat,  3 Mar 2001 08:29:43 -0300
+
+fetchmail (5.6.8-3) unstable; urgency=low
+
+  * Fix imap timeout when talking to Micoshaft Exchange
+    servers (closes: #87908)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 28 Feb 2001 19:10:52 -0300
+
+fetchmail (5.6.8-2) unstable; urgency=low
+
+  * Remind users that daemon means daemon (closes: #87580)
+  * Make sure fetchmail is started on ip-up (closes: #87577)
+  * Removed findutils from build-depends.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 25 Feb 2001 12:59:51 -0300
+
+fetchmail (5.6.8-1) unstable; urgency=low
+
+  * New upstream source
+    Upstream has changed the syntax of "preauth" back to "auth",
+    please update your fetchmail configuration files.
+  * Maintainer scripts are now able to handle the sharing of
+    /etc/init.d/fetchmail by fetchmail and fetchmail-ssl without
+    causing problems during purge
+  * Avoid causing health problems during system boot ;-) (closes: #86885)
+  * "Improved" fetchmail-up and fetchmail-down scripts (closes: #86924)
+    This *will* bite your arse if you use PPP and don't read README.Debian;
+    Given the debconf annoyance I've added, and this changelog entry, consider
+    yourself warned and go read the README.Debian.
+  * Debconf support added to warn people about the init.d and ppp
+    scripts changes.
+  * Added missing Suggests: fetchmailconf to fetchmail-ssl
+  * Added missing xutils to Build-Depends: (for makedepend)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 21 Feb 2001 12:35:19 -0300
+
+fetchmail (5.6.7-2) unstable; urgency=medium
+
+  * Instead of reverting the change in driver.c, apply fix
+  * New CRAM-MD5 code is fully RFC-compliant, closes: #86667, #86474
+  * Add warning to fetchmailconf for local usernames with embedded '@'
+    Closes: #82514
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 20 Feb 2001 05:20:39 -0300
+
+fetchmail (5.6.7-1) unstable; urgency=medium
+
+  * New upstream source:
+    - Fixes pop3 AUTH/CAPA stuff so as to be rfc-compliant
+  * Please note 5.6.5 made changes to the fetchmailrc format, related
+    to the fact that many authorization features (such as CRAM-MD5) are now
+    auto-detected for both IMAP and POP3
+  * Reverted change done to driver.c in 5.6.6 which caused fetchmail to emit
+    wrong status messages on timeouts when opening the mail server (source)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 19 Feb 2001 21:27:37 -0300
+
+fetchmail (5.6.6-2) unstable; urgency=medium
+
+  * The "children should not make fun of their elders" release
+  * Fetchmail wouldn't ask for passwords anymore (closes: #86350)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 17 Feb 2001 10:33:38 -0200
+
+fetchmail (5.6.6-1) unstable; urgency=medium
+
+  * New upstream source
+  * The "let's get that old maid out of testing" release
+  * No more asking for a password when using ETRN (closes: #85938)
+  * Don't issue AUTH between USER and PASS (closes: #85853, #86047)
+  * Different error message when local connection fails (closes: #85961)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 16 Feb 2001 17:28:11 -0200
+
+fetchmail (5.6.5-3) unstable; urgency=low
+
+  * Locales were not being correctly setup (closes: #73614)
+  * Applied patches to allow build with Kerberos IV (closes: #85772)
+  * /etc/init.d/fetchmail script for system-wide mail delivery,
+    create file /etc/fetchmailrc to enable. Deleted bogus
+    debian_rc file from the contrib dir to avoid confusing users.
+    (closes: #66251, #77804)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 15 Feb 2001 17:27:56 -0200
+
+fetchmail (5.6.5-2) unstable; urgency=low
+
+  * Added hack from hell to generate fetchmail-ssl from the same source tree
+  * New fetchmail-ssl package, recompiled against up-to-date unstable
+    closes: #82073, #84427, #76240, #78362, #43179, #79153, #60949
+    closes: #79967, #82503, #84434, #59584, #50421, #66624
+  * Suggests fetchmailconf (closes: #69069)
+  * Bugs fixed by 5.5.4 and above:
+    closes: #75011, #70862, #69358, #69199, #66110, #63667
+    closes: #62115, #61983, #59698
+    probably closes: #80344
+  * This is a new version (closes: #66824)
+  * Ported to debhelper v3, mode v2 (i.e. rebuilt debian/rules), and
+    fixed all crosstalk between the fetchmail and fetchmailconf packages.
+    Closes: #76240, #79967, #54132, #55205
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 12 Feb 2001 15:25:18 -0200
+
+fetchmail (5.6.5-1) unstable; urgency=low
+
+  * New upstream source
+  * Closing bugs fixed by versions 5.5.4 and above:
+    closes: #78963, #63064, #65505, #81312, #78796, #78363
+    closes: #68627, #63088, #71428
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 12 Feb 2001 12:49:22 -0200
+
+fetchmail (5.6.4-1) unstable; urgency=low
+
+  * New upstream source
+  * Package is now compliant with policy 3.5.0.0
+  * Fixed stupid screwup that might stop an autobuild in debian/rules
+  * Tentative build-depends. Please file a bug if it doesn't work
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 11 Feb 2001 14:24:42 -0200
+
+fetchmail (5.6.3-1) unstable; urgency=low
+
+  * New upstream source
+  * New maintainer.  Paul orphaned the package, and the other person who
+    should become the new fetchmail maintainer went MIA without so
+    much as uploading a new package or finishing his NM application
+  * Minor package cleanups
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 10 Feb 2001 21:55:06 -0200

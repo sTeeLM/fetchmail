@@ -1,0 +1,13 @@
+#!/bin/sh
+
+###############################
+### Check fetchmail service ###
+###############################
+
+set -e
+
+echo "Checking fetchmail service is enabled"
+systemctl is-enabled fetchmail.service
+
+echo "Checking fetchmail service is active"
+systemctl is-active fetchmail.service

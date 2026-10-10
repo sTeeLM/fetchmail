@@ -1,0 +1,5 @@
+01_fetchmailconf.patch
+04_invoke-rc.d.diff
+07_properly_report_size_of_mailboxes.patch
+08_remove_forced_OpenSSL_check.patch
+CVE-2025-61962.patch

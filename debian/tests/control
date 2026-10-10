@@ -1,0 +1,15 @@
+Test-Command: ./configure && make check
+Depends: @, build-essential, gcc, libssl-dev, python3
+Restrictions: allow-stderr
+
+Tests: installation
+Depends: @
+Restrictions:
+
+Tests: service
+Depends: @, systemd-sysv
+Restrictions: needs-root, allow-stderr
+
+Tests: operation
+Depends: @, sudo, python3
+Restrictions: needs-root

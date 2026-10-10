@@ -1,0 +1,3 @@
+usr/bin/fetchmail usr/bin/popclient
+usr/share/man/man1/fetchmail.1 usr/share/man/man1/popclient.1
+usr/share/man/man1/fetchmail.1 usr/share/man/man1/fetchmailrc.1

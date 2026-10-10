@@ -1,0 +1,14 @@
+Fetchmail for Debian, contrib/README.Debian file
+$Id: README.contrib,v 1.4 2003/06/09 14:55:57 benj Exp $
+==========================================================
+
+A lot of the stuff in contrib/ is NOT tailored for being run in a
+Debian system, and will malfunction or break your system if not correctly
+modified. If you don't know what you're doing, don't use it.  I do NOT
+maintain the contrib/ directory, nor does fetchmail upstream.
+
+I have removed some useless or outright dangerous stuff from there as
+well.  You can always get the complete contrib/ contents from the source
+package.
+
+ -- Benjamin Drieu <benj@debian.org>

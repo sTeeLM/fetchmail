@@ -1,0 +1,47 @@
+#!/bin/sh
+
+###########################
+### Test fetching email ###
+###########################
+
+set -e
+
+POP3_SERVER=127.0.0.1
+POP3_PORT=11110
+USER=${USER:-user}
+PASSWORD=ubuntu
+WORKDIR=$(mktemp -d)
+trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+
+LOG="${WORKDIR}/fetchmail.log"
+MBOX="${WORKDIR}/test-mbox-$(date +%''s_%N)"
+CONFIG="${WORKDIR}/fetchmailrc"
+
+echo "Configuring a functional local mail system"
+
+python3 "$(dirname ${0})/mock-pop3-server.py" &
+SERVER_PID=$!
+sleep 1
+
+# Configure fetchmail
+cat > "${CONFIG}" <<EOF
+poll ${POP3_SERVER} port ${POP3_PORT} no uidl with protocol POP3:
+  auth password
+  user '${USER}' there with password '${PASSWORD}'
+  is ${USER} here
+  sslproto ''
+  mda "/bin/sh -c 'cat > ${MBOX}'"
+EOF
+chmod 700 "${CONFIG}"
+chown -R fetchmail "${WORKDIR}"
+
+# Run fetchmail
+echo "Checking fetchmail operates"
+sudo -u fetchmail /usr/bin/fetchmail -d0 -vvv -f "${CONFIG}" "${POP3_SERVER}"
+
+# TODO: Verify the test email was delivered to expected destination
+echo "Checking test email was received"
+grep "Received: from " "${MBOX}"
+
+kill ${SERVER_PID}
+echo "OK"

@@ -1,0 +1,12 @@
++ Maybe add a suid-to-utterly-unpriviledged-user mode for the
+  benefit of those not using system-wide fetchmails because they
+  don't want root to have their mail passwords.
+* verify .de template, and linelength of all templates
+* verify all the weirdness with the signal handling, and
+  especially concerning SA_RESTART [pending]
+* fix heimdal support in unstable
+
+2. when fetchmail exits with SMTP transaction errors (code 10), fetchmail jumps
+out of the window before updating its .fetchids, thus, previous successful
+transactions are done again the next fetchmail run -> duplicate mail on
+receiver.

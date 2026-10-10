@@ -1,0 +1,23 @@
+#!/bin/sh
+
+############################################
+### Check main installation requirements ###
+############################################
+
+set -e
+
+# Config file
+echo "Checking config file present"
+test -e /etc/default/fetchmail
+
+# Service
+echo "Checking service scripts are installed"
+test -e /etc/init.d/fetchmail
+test -e /etc/ppp/ip-down.d/fetchmail
+
+# Script
+echo "Checking fetchmail is present"
+test -e /usr/bin/fetchmail
+fetchmail --version > /dev/null 2>&1
+c=$(fetchmail --help 2>&1 | wc -l)
+test $c -gt 5

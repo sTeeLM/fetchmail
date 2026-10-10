@@ -1,0 +1,19 @@
+Description: patch contrib files to run invoke-rc.d instead of /etc/init.d/* directly
+ This is required by policy 4.0.0.
+Author: Nicolas Boulenguez <nicolas@debian.org>
+
+--- a/contrib/fetchmail.logrotate
++++ b/contrib/fetchmail.logrotate
+@@ -46,11 +46,7 @@
+     sharedscripts
+     postrotate
+         if [ -f /var/run/fetchmail/fetchmail.pid ]; then \
+-            if [ -x /usr/sbin/invoke-rc.d ]; then \
+-                invoke-rc.d fetchmail restart > /dev/null; \
+-            else \
+-                /etc/init.d/fetchmail restart > /dev/null; \
+-            fi; \
++            invoke-rc.d fetchmail restart > /dev/null;
+         fi;
+     endscript
+ }

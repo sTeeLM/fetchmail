@@ -1,0 +1,30 @@
+# A single line with a single occurence of the destination directory
+# would be more efficient (as debhelper would use one cp command), but
+# this presentation seems more easy to maintain.
+contrib/fetchmailnochda.pl              usr/share/doc/fetchmail/contrib
+contrib/fetchsetup                      usr/share/doc/fetchmail/contrib
+contrib/domino                          usr/share/doc/fetchmail/contrib
+contrib/fetchmaildistrib                usr/share/doc/fetchmail/contrib
+contrib/fetchmail-mode.el               usr/share/doc/fetchmail/contrib
+contrib/getmail                         usr/share/doc/fetchmail/contrib
+contrib/gotmail                         usr/share/doc/fetchmail/contrib
+contrib/gotmail.awk                     usr/share/doc/fetchmail/contrib
+contrib/gotmail.conf                    usr/share/doc/fetchmail/contrib
+contrib/gotmail.html.awk                usr/share/doc/fetchmail/contrib
+contrib/login                           usr/share/doc/fetchmail/contrib
+contrib/logout                          usr/share/doc/fetchmail/contrib
+contrib/maildaemon                      usr/share/doc/fetchmail/contrib
+contrib/mailqueue.pl                    usr/share/doc/fetchmail/contrib
+contrib/multidrop                       usr/share/doc/fetchmail/contrib
+contrib/novell                          usr/share/doc/fetchmail/contrib
+contrib/poptest                         usr/share/doc/fetchmail/contrib
+contrib/preauth-harness                 usr/share/doc/fetchmail/contrib
+contrib/README                          usr/share/doc/fetchmail/contrib
+contrib/README.getmail                  usr/share/doc/fetchmail/contrib
+contrib/runfetchmail                    usr/share/doc/fetchmail/contrib
+contrib/toprocmail                      usr/share/doc/fetchmail/contrib
+contrib/zsh-completion                  usr/share/doc/fetchmail/contrib
+contrib/fetchmail.logrotate             usr/share/doc/fetchmail/contrib
+contrib/delete-later                    usr/share/doc/fetchmail/contrib
+contrib/delete-later.README             usr/share/doc/fetchmail/contrib
+contrib/systemd/fetchmail.service       usr/lib/systemd/user/

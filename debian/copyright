@@ -1,0 +1,311 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: fetchmail
+Upstream-Contact: http://www.fetchmail.info
+Source: https://gitlab.com/fetchmail/fetchmail/
+
+Files: *
+Copyright: 2005-2021 Matthias Andree
+           2005-2012 Sunil Shetye
+           1987-2012 Free Software Foundation, Inc.
+           2004      Matthias Andree
+           2004      Robert M. Funk
+           2004      Graham Wilson
+           1997-2004 Eric S. Raymond
+           1996-1997 George M. Sipe
+           1993-1995 Carl E. Harris
+License: GPL-2+ with OpenSSL exception
+ Copyright retained for the purpose of protecting free software redistribution.
+ Specific permission is granted for the GPLed code in this distribition to
+ be linked to OpenSSL without invoking GPL clause 2(b).
+ .
+ The full text of the GNU General Public License is available in
+ /usr/share/common-licenses/GPL-2.
+
+Files: aclocal.m4
+       config.rpath
+Copyright: 1996-2011 Free Software Foundation, Inc
+           1996      Gordon Matzigkeit <gord@gnu.ai.mit.edu>
+License: FSFAP
+ This file is free software; the Free Software Foundation gives
+ unlimited permission to copy and/or distribute it, with or without
+ modifications, as long as this notice is preserved.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY, to the extent permitted by law; without even
+ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.
+
+Files: beos/*
+Copyright: 1983-1999 The Regents of the University of California
+License: BSD-4-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. All advertising materials mentioning features or use of this software
+    must display the following acknowledgement:
+    This product includes software developed by the University of
+    California, Berkeley and its contributors.
+ 4. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+Files: contrib/runfetchmail
+       idle.c
+       rfc822.c
+Copyright: 1997      Eric S. Raymond <esr@thyrsus.com>
+           1997      Doug Muth, Wescosville, Pennsylvania USA
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+ BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+Files: install-sh
+Copyright: 1994      X Consortium
+License: MIT-X-Consortium
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNEC-
+ TION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice, the name of the X Consortium shall not
+ be used in advertising or otherwise to promote the sale, use or other deal-
+ ings in this Software without prior written authorization from the X Consor-
+ tium.
+
+Files: KAME/*
+Copyright: 1995-1998 WIDE Project
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the project nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+Files: libesmtp/*
+Copyright: 2001-2002 Brian Stafford <brian@stafford.uklinux.net>
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ The full text of the GNU Lesser General Public License is available
+ in /usr/share/common-licenses/LGPL-2.1.
+
+Files: rcfile_y.c
+       rcfile_y.h
+Copyright: 1984-2011 Free Software Foundation, Inc.
+License: GPL-3+ with bison exception
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+ .
+ As a special exception, you may create a larger work that contains
+ part or all of the Bison parser skeleton and distribute that work
+ under terms of your choice, so long as that work isn't itself a
+ parser generator using the skeleton or a modified version thereof
+ as a parser skeleton.  Alternatively, if you modify or redistribute
+ the parser skeleton itself, you may (at your option) remove this
+ special exception, which will cause the skeleton and the resulting
+ Bison output files to be licensed under the GNU General Public
+ License without this special exception.
+
+Files: ntlm.h
+       smb*.c
+       smb*.h
+Copyright: 1992-1998 Andrew Tridgell
+           1995      Jeremy Allison
+License: GPL-2+ with link exception
+ Tridge has granted a specific exemption for his GPL-licensed code to
+ be linked with non-GPL-compliant code in fetchmail.
+ .
+ The full text of the GNU General Public License is available in
+ /usr/share/common-licenses/GPL-2.
+
+Files: md5c.c
+Copyright: 1993 Colin Plumb
+License: public-domain
+ No copyright is claimed.
+ The algorithm is due to Ron Rivest.
+ This code is in the public domain; do with it what you wish.
+
+Files: m4-local/ac_ma_search_package.m4
+Copyright: 2001-2004 Caolan McNamara <caolan@skynet.ie>
+           2001-2004 Alexandre Duret-Lutz <duret_g@lrde.epita.fr>
+           2001-2004 Matthew Mueller <donut@azstarnet.com>
+           2001-2004 Matthias Andree <matthias.andree@gmx.de>
+License: GPL-2+ with autoconf exception
+ Please note that every macro contained in this archive is copyrighted
+ by its respective author, unless the macro source explicitly says
+ otherwise. Permission has been granted, though, to use and distribute
+ all macros under the following license, which is a modified version of
+ the GNU General Public License version 2:
+ .
+ Every Autoconf macro presented on this web site is free software;
+ you can redistribute it and/or modify it under the terms of the GNU
+ General Public License as published by the Free Software
+ Foundation; either version 2, or (at your option) any later
+ version.
+ .
+ They are distributed in the hope that they will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ General Public License for more details.
+ .
+ The full text of the GNU General Public License is available in
+ /usr/share/common-licenses/GPL-2.
+ .
+ As a special exception, the Free Software Foundation gives
+ unlimited permission to copy, distribute and modify the configure
+ scripts that are the output of Autoconf. You need not follow the
+ terms of the GNU General Public License when using or distributing
+ such scripts, even though portions of the text of Autoconf appear
+ in them. The GNU General Public License (GPL) does govern all other
+ use of the material that constitutes the Autoconf program.
+ .
+ Certain portions of the Autoconf source text are designed to be
+ copied (in certain cases, depending on the input) into the output
+ of Autoconf. We call these the "data" portions. The rest of the
+ Autoconf source text consists of comments plus executable code that
+ decides which of the data portions to output in any given case. We
+ call these comments and executable code the "non-data" portions.
+ Autoconf never copies any of the non-data portions into its output.
+ .
+ This special exception to the GPL applies to versions of Autoconf
+ released by the Free Software Foundation. When you make and
+ distribute a modified version of Autoconf, you may extend this
+ special exception to the GPL to apply to your modified version as
+ well, *unless* your modified version has the potential to copy into
+ its output some of the text that was the non-data portion of the
+ version that you started with. (In other words, unless your change
+ moves or copies text from the non-data portions to the data
+ portions.) If your modification has such potential, you must delete
+ any notice of this special exception to the GPL from your modified
+ version.
+
+Files: trio/*
+       ucs/*.c
+Copyright: 2002-2003 Markus Kuhn
+           1998-2001 Bjorn Reese
+           1998-2001 Daniel Stenberg
+License: ISC
+ Permission to use, copy, modify, and distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR IMPLIED
+ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+ MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE AUTHORS AND
+ CONTRIBUTORS ACCEPT NO RESPONSIBILITY IN ANY CONCEIVABLE MANNER.
+
+Files: debian/*
+Copyright:
+ 2015-     Laszlo Boszormenyi (GCS) <gcs@debian.org>
+ 2018      Nicolas Boulenguez <nicolas@debian.org>
+ 2005-2016 Nico Golde <nion@debian.org>
+ 2005-2016 Héctor García <hector@debian.org>
+ 2005      Lucas Wall <lwall@debian.org>
+ 2005      Loic Minier <lool@dooz.org>
+ 2003-2004 Graham Wilson <graham@debian.org>
+ 2002-2003 Benjamin Drieu <benj@debian.org>
+ 2001-2002 Henrique M. Holschuh <hmh@debian.org>
+ 1996-2002 Paul Haggart <phaggart@debian.org>
+License: GPL-2+
+
+Files: debian/tests/*
+Copyright: 2019 Bryce Harrington <bryce@canonical.com>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+Comment: On Debian systems, the complete text of the GNU General Public
+ License v2 can be found in `/usr/share/common-licenses/GPL-2'.

@@ -1,0 +1,165 @@
+Fetchmail for Debian, README file
+$Id: README.Debian 228 2005-08-14 15:52:49Z nion $
+
+Miscellaneous notes
+-------------------
+
+Fetchmail wants a MTA and will not use a MDA fallback by default anymore.
+Please configure it correctly for your system.
+
+Also, MTA return codes 552 and 553 always cause fetchmail to trash the message,
+unless "keep" mode is being used. MTA return codes in the "antispam" option
+list will also cause mail loss. However, this list is empty by default.
+
+
+Build instructions
+------------------
+
+Make sure to run "debian/rules clean" BEFORE you try to build the package
+(dpkg-buildpackage will do that for you). You have been warned.
+
+You can tailor the capabilities of fetchmail (e.g. to add Kerberos IV support)
+by defining DEB_FETCHMAIL_BUILD_OPTIONS before building the package. There is
+no need to edit debian/rules anymore. Please read the comments in debian/rules
+for more information.
+
+Building KerberosV support using the Heimdal libs in Debian will only work in
+the SSL version of fetchmail.
+
+
+Fetchmail and losing mail
+-------------------------
+
+POP3 servers are known to delete stored mail for no good reason, no matter what
+it is told to do. Badly-configured MTAs are known to send email to the trash or
+bounce it with spam return codes -- including email sent to the postmaster. And
+fetchmail is known to be blamed for both these things causing mail loss.
+
+SEND EMAIL TO YOURSELF MANUALLY TROUGH WHICHEVER DELIVERY METHOD YOU WANT
+FETCHMAIL TO SEND THROUGH, TO TEST IT BEFORE RUNNING FETCHMAIL.
+
+CHECK YOUR MTA AND POP3 SERVER BY TELLING FETCHMAIL NOT TO DELETE MAIL FROM
+YOUR SERVER ("keep" option) NOR DELETE SPAM ("antispam -1") NOR BOUNCE MAIL
+("set no bouncemail") IF YOU VALUE YOUR EMAIL. YOU HAVE BEEN WARNED.
+
+The above checks should be made every time you change something important in
+either fetchmail's or the MTA/MDA configuration.
+
+Now, let's go over it once again: Fetchmail can, and will delete your mail if
+it thinks the MTA is telling it to do so. Option "keep" will avoid the
+deletion of messages. If you forget to tell fetchmail to "keep" messages, and
+the MTA refuses delivery (particularly with codes 552 (message too large) or 553
+(invalid envelope sender), fetchmail will delete the message even when it
+failed to deliver it. Setting "no bouncemail" and "antispam -1" makes such
+deletion less likely.
+
+
+Using the system-wide fetchmail
+-------------------------------
+
+The fetchmail package install a SysV init script in /etc/init.d/fetchmail.
+This script will start a fetchmail daemon running as the user fetchmail, if
+the configuration file /etc/fetchmailrc is present in the system. If the
+configuration file is not present, nothing is started.
+
+If the system-wide fetchmail refuses to start, you probably have syntax
+errors in the /etc/fetchmailrc file. Try /etc/init.d/fetchmail debug-run
+to find out why it is not starting. Do notice that debug-run is *not*
+capable of detecting errors that happen only in daemon mode.
+
+By default, the system-wide fetchmail daemon will poll every 5 minutes. To
+change this, add a line like the following to your /etc/fetchmailrc file:
+
+  set daemon 900     # poll every 15 minutes
+
+Also, the system-wide fetchmail daemon will by default log all output to
+syslog. To disable this (e.g. if you use the logfile option), add the
+following to your /etc/fetchmailrc file:
+
+  set no syslog      # disable logging to syslog
+
+
+Fetchmail on a PPP link
+-----------------------
+
+By default, the system-wide fetchmail will start at boot, and will be
+restarted when the PPP link is brought up. You, can however, configure
+the system-wide fetchmail to *only* run when the PPP link is up (note
+that this has no real advantage over running fetchmail all the time). To
+do so, you must do four things:
+
+  1. Turn of fetchmail at boot. Simply rename the S99fetchmail links in
+     the /etc/rc?.d directories to K15fetchmail. For example:
+
+    # cd /etc/rc2.d
+    # mv S99fetchmail K15fetchmail
+
+    Under Debian, it is advised to use generic commands:
+    # invoke-rc.d fetchmail stop
+    # update-rc.d fetchmail remove
+
+  2. Edit the ip-up script as described in the comments.
+
+  3. Edit the ip-down script as describe in the comments.
+
+  4. Remove /etc/resolvconf/update-libc.d/fetchmail (or add an "exit 0"
+     line at the beginning).
+
+Note that both the init script and the fetchmail PPP scripts are conffiles,
+so if you don't like the setup you just need to change them to your heart's
+content. The changes will not be overwritten by a package upgrade without
+your explicit consent.
+
+
+Running the system-wide fetchmail as root
+-----------------------------------------
+
+The fetchmail package no longer supports running the system-wide fetchmail
+as root. To switch to the new init script facility, just move your
+/root/.fetchmailrc to /etc/fetchmailrc, read the "UIDL cache" section below,
+and run:
+
+  invoke-rc.d fetchmail restart
+
+
+The UIDL cache
+--------------
+
+Fetchmail has an UIDL cache it may use to track message-seen state. The
+init script and ip-up scripts want this cache to be in
+/var/mail/.fetchmail-UIDL-cache. Note the paths leading up to the UIDL
+cache file must be readable by the fetchmail user. This should not be a
+problem on a default Debian install.
+
+
+Errors with POP3 servers
+------------------------
+
+If you have difficulties with your POP3 server, and fetchmail -v shows that
+fetchmail is trying to use AUTH instead of USER and PASS, you can use
+"auth password" to force the use of USER and PASS. Also, fetchmailconf has
+a blacklist of known-bad servers, try autodetecting the server with it.
+
+
+Reporting problems
+------------------
+
+Use a Debian bug-reporting tool (e.g. reportbug from the reportbug package) to
+report problems. Please include a fetchmail -v -v dump showing the problem to
+aid debugging. /etc/init.d/fetchmail debug-run will do that for you if you are
+using the system-wide fetchmail feature (Do remember that problems that only
+happen in daemon mode are NOT triggered by debug-run).
+
+Problems with signals (e.g. "why fetchmail aborts with SIGPIPE?") need the use
+of strace for debugging. Just do:
+
+  /etc/init.d/fetchmail debug-run strace -o /tmp/strace.out
+
+and the init script will run fetchmail, and store the strace output in
+/tmp/strace.out. See strace(1) for more details on strace.
+
+WARNING: strace output may contain security-sensitive information, such as your
+fetchmail passwords. You should clobber those with "*" or "X" before sending
+the file to anyone, especially the Debian bug-tracking system.
+
+ -- Nicolas Boulenguez <nicolas@debian.org>, Tue, 10 Apr 2018 15:26:22 +0200

@@ -1,0 +1,12 @@
+version=4
+opts=uversionmangle=s/^(SNAPSHOT|RELEASE)\.//;s/(\d+)[_-](\d+)[_-](\d+)/\$1.\$2.\$3/;s/(\d+)[_-](\d+)/\$1.\$2/;s/(\d)[_\.\-\+]?((rc|pre|dev|beta|alpha|b|a)[\-\.]?\d*)$/$1~$2/;s/(\d)[_\.\-\+]?RC[\-\.]?(\d*)$/$1~rc$2/,\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.?\d+)?$//i,\
+pgpsigurlmangle=s/$/.asc/ \
+https://gitlab.com/fetchmail/fetchmail/tags \
+.*/tags/(SNAPSHOT|RELEASE)[_-]v?(\d\S*)
+
+opts=uversionmangle=s/^(SNAPSHOT|RELEASE)\.//;s/(\d+)[_-](\d+)[_-](\d+)/\$1.\$2.\$3/;s/(\d+)[_-](\d+)/\$1.\$2/;s/(\d)[_\.\-\+]?((rc|pre|dev|beta|alpha|b|a)[\-\.]?\d*)$/$1~$2/;s/(\d)[_\.\-\+]?RC[\-\.]?(\d*)$/$1~rc$2/,\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.?\d+)?$//i,\
+pgpsigurlmangle=s/$/.asc/ \
+https://gitlab.com/fetchmail/fetchmail/tags \
+.*/tags/(SNAPSHOT|RELEASE)[_-]v?(6.4.\d\S*)
